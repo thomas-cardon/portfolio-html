@@ -11,7 +11,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: Segoe UI, Arial, Helvetica Neue, sans-serif;
+  font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
 }
 
 .alinea {
@@ -194,7 +194,6 @@ header.sm {
 }
 
 .video-container > video {
-  -o-object-fit: firll;
   object-fit: fill;
   position: absolute;
   top: 50%;
@@ -220,7 +219,7 @@ header.sm {
 }
 
 .btn-highlight > a {
-  font-family: Balsamiq Sans,Poppins,system-ui;
+  font-family: system-ui;
   font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
