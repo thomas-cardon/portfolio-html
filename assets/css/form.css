@@ -1,0 +1,56 @@
+form.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+form.contact > input,textarea {
+  width: 100%;
+}
+
+form.contact > * {
+  float: left;
+}
+
+form.contact > .user-box input, textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+form.contact > button {
+  background: white;
+
+  border: none;
+  outline: none;
+
+  position: relative;
+  display: inline-block;
+
+  padding: 10px 20px;
+  margin-top: 40px;
+
+  color: black;
+
+  font-family: "HeeboBold";
+  font-size: 1em;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+form.contact > button:hover {
+  transform: scale(1.05, 1.05);
+}
+
+/* Fade in the pseudo-element with the bigger shadow */
+form.contact > button::after {
+  opacity: 1;
+}

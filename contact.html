@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <title>Thomas Cardon</title>
+  <meta name="description" content="Portfolio de Thomas Cardon - Etudiant en informatique de 19 ans, aspirant à de grandes choses">
+  <meta name="keywords" content="portfolio,thomas,cardon,étudiant,iut,aix,marseille,aix-en-provence,informatique,it">
+
+  <meta name="author" content="Thomas Cardon">
+
+  <link rel="icon" href="./assets/img/favicon.png" />
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/cards.css">
+  <link rel="stylesheet" href="./assets/css/form.css">
+</head>
+<body>
+  <section class="video-container">
+    <div class="overlay"></div>
+    <video autoplay="" loop="" playsinline="" muted="">
+      <source src="./assets/videos/bg.webm" type="video/webm">
+      <source src="./assets/videos/bg.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <header class="sm">
+        <a href="./index.html">
+          <div style="display: flex;align-items: center;">
+            <img class="avatar-sm" alt="Photo" src="./assets/img/avatar.webp" />
+
+            <h1 class="title-sm">
+              Thomas <span class="color-primary">Cardon</span>
+            </h1>
+          </div>
+        </a>
+
+        <div style="background-color: rgba(0,0,0,.5); float: right;">
+          <div class="btn-highlight bg-secondary">
+            <a href="https://github.com/Ryzzzen" target="_blank">GitHub</a>
+          </div>
+
+          <div class="btn-highlight bg-secondary">
+            <a href="./cv.html">Curriculum Vitae</a>
+          </div>
+
+          <div class="btn-highlight bg-secondary">
+            <a href="#">Formulaire de contact</a>
+          </div>
+
+          <div class="btn-highlight bg-secondary">
+            <a href="./bibliographie.html">Bibliographie</a>
+          </div>
+        </div>
+      </header>
+
+      <p class="subtitle">
+        Formulaire de contact
+      </p>
+
+      <div class="desc">
+        <!-- formspree.io permet d'envoyer un mail directement sans avoir à ouvrir un client de messagerie -->
+        <form class="contact login-box" action="https://formspree.io/f/xdopdgwo" method="POST">
+          <div class="user-box">
+            <label>Adresse mail</label>
+            <input type="email" name="_replyto" placeholder="Tapez ici">
+          </div>
+          <div class="user-box">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tapez ici"></textarea>
+          </div>
+          <button type="submit">Envoyer</a>
+          <button onclick="location.href = 'mailto:thomas.cardon@pm.me'; return false;">Ouvrir le client de messagerie</button>
+        </form>
+      </div>
+
+      <footer>
+        <div class="child">
+          <span class="title">Adresse mail —</span>
+          <span>thomas.cardon@etu.univ-amu.fr</span>
+        </div>
+        <div class="child">
+          <span class="title">Mon adresse —</span>
+          <br>
+          <span>564 Avenue Gaston Berger</span>
+          <br>
+          <span>Appartement 354</span>
+          <br>
+          <span>13100 Aix-en-Provence</span>
+        </div>
+        <p class="child-large">
+          <em>
+            Ce site à été créé pendant l'hiver de 2020, et n'utilise que HTML5, CSS3, et JavaScript. J'ai une autre version de mon site personnel accessible
+            <a href="https://thomascardon.fr" target="_blank">ici</a>, qui utilisait d'autre technologies (NextJS, React), mais je pense qu'elle était hors sujet par rapport aux besoins du <a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">projet demandé</a>.
+            © Thomas Cardon — 2020
+          </em>
+        </p>
+      </footer>
+    </div>
+  </section>
+  <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
