@@ -23,9 +23,17 @@ body {
   font-family: Perpetua;
 }
 
+h1.title {
+  font-size: 4rem;
+}
+
+h2.title {
+  font-size: 3rem;
+}
+
+
 .title {
   line-height: 1.15;
-  font-size: 4rem;
   letter-spacing: -0.02em;
 
   color: #fff;
