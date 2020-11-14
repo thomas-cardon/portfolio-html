@@ -132,12 +132,20 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 header.sm {
   justify-content: space-between;
+}
+
+header > nav {
+  background-color: rgba(0,0,0,.5);
+  float: right;
+}
+
+header > nav > .btn-highlight {
+  background-color: unset;
 }
 
 .avatar {
