@@ -13,6 +13,34 @@
 
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/cards.css">
+
+  <style type="text/css">
+  @keyframes bounceInDown {
+     0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+     }
+     60% {
+        opacity: 1;
+        transform: translateY(30px);
+     }
+     80% {
+        transform: translateY(-10px);
+     }
+     100% {
+        transform: translateY(0);
+     }
+  }
+
+  .bounceInDown {
+     animation-name: bounceInDown;
+  }
+
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+</style>
 </head>
 <body>
   <section class="video-container">
@@ -21,7 +49,7 @@
       <source src="./assets/videos/bg.webm" type="video/webm">
       <source src="./assets/videos/bg.mp4" type="video/mp4">
     </video>
-    <div class="container max-vh">
+    <div class="container max-vh animated bounceInDown">
       <div class="me">
         <img alt="Photo" src="./assets/img/avatar.webp" />
 
