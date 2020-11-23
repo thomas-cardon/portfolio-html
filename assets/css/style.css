@@ -197,7 +197,7 @@ header > nav > .btn-highlight {
 .subtitle {
   user-select: none;
 
-  font-family: "Heebo";
+  font-family: "Heebo", system-ui;
   font-size: 2em;
   line-height: 1.4em;
   letter-spacing: .04em;
@@ -210,7 +210,7 @@ header > nav > .btn-highlight {
   margin-left: 1.5em;
   margin-right: 1.5em;
   color: whitesmoke;
-  font-family: 'Heebo';
+  font-family: "Heebo", system-ui;
   line-height: 1.4em;
   letter-spacing: 0.04em;
   font-size: 1.2em;
