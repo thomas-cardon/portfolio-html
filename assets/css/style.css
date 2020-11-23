@@ -78,6 +78,10 @@ h2.title {
 }
 
 /* Conteneurs */
+main {
+  margin-top: 3em;
+}
+
 .container {
   padding: 0 0.5rem;
   display: flex;
@@ -141,9 +145,7 @@ img#avatar {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-img#avatar {
-  border-radius: 50%;
-  margin-right: 3em;
+img#avatar.sm {
   width: 64px;
 }
 
@@ -202,13 +204,25 @@ img#avatar:hover {
     z-index: 2;
 }
 
-/* Navigation bar */
 header {
+  position: relative;
+  z-index: 5;
+
   width: 100%;
+  padding: 0 0.5rem;
+
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
+  transition: background-color 0.5s ease-in-out;
 }
+
+/*
+html:not([data-scroll='0']) header {
+  background-color: rgba(0, 0, 0, 1);
+}
+*/
 
 header.sm {
   justify-content: space-between;
@@ -319,6 +333,9 @@ form.contact > button:hover {
 
 /* Bas de page */
 footer {
+  position: relative;
+  z-index: 2;
+
   background-color: rgba(0,0,0,.5);
 
   min-height: 10em;
