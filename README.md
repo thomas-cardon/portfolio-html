@@ -6,3 +6,4 @@
 - Theme Switcher
 - Trier les classes CSS par priorité
 - Retirer les classes inutiles
+- Navbar fixe avec ancrages pour remonter
