@@ -4,58 +4,57 @@
   <meta charset="utf-8">
 
   <title>Thomas Cardon</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfolio de Thomas Cardon - Etudiant en informatique de 19 ans, aspirant à de grandes choses">
   <meta name="keywords" content="portfolio,thomas,cardon,étudiant,iut,aix,marseille,aix-en-provence,informatique,it">
 
   <meta name="author" content="Thomas Cardon">
 
   <link rel="icon" href="./assets/img/favicon.png" />
-
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/cards.css">
-  <link rel="stylesheet" href="./assets/css/form.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-  <section class="video-container">
-    <div class="overlay"></div>
+  <div class="video-container">
     <video autoplay="" loop="" playsinline="" muted="">
       <source src="./assets/videos/bg.webm" type="video/webm">
     </video>
-    <div class="container">
-      <header class="sm">
-        <a href="./index.html">
-          <div class="me">
-            <img id="avatar" class="sm" alt="Photo" src="./assets/img/avatar.webp" />
 
-            <h1 class="title sm">
-              Thomas <span class="color-primary">Cardon</span>
-            </h1>
-          </div>
-        </a>
+    <header class="sm">
+      <a href="./index.html">
+        <div class="me">
+          <img id="avatar" class="sm" alt="Photo" src="./assets/img/avatar.webp" />
 
-        <nav>
-          <div class="btn-highlight bg-secondary">
-            <a href="https://github.com/Ryzzzen" target="_blank">GitHub</a>
-          </div>
+          <h1 class="title sm">
+            Thomas <span class="color-primary">Cardon</span>
+          </h1>
+        </div>
+      </a>
 
-          <div class="btn-highlight bg-secondary">
-            <a href="./projets.html">Mes projets</a>
-          </div>
+      <nav>
+        <div class="btn-highlight bg-secondary">
+          <a href="https://github.com/Ryzzzen" target="_blank">GitHub</a>
+        </div>
 
-          <div class="btn-highlight bg-secondary">
-            <a href="./cv.html">Curriculum Vitae</a>
-          </div>
+        <div class="btn-highlight bg-secondary">
+          <a href="./projets.html">Mes projets</a>
+        </div>
 
-          <div class="btn-highlight bg-secondary">
-            <a href="./contact.html">Formulaire de contact</a>
-          </div>
+        <div class="btn-highlight bg-secondary">
+          <a href="./cv.html">Curriculum Vitae</a>
+        </div>
 
-          <div class="btn-highlight bg-secondary">
-            <a href="#">Bibliographie</a>
-          </div>
-        </nav>
-      </header>
+        <div class="btn-highlight bg-secondary">
+          <a href="./contact.html">Formulaire de contact</a>
+        </div>
 
+        <div class="btn-highlight bg-secondary">
+          <a href="#">Bibliographie</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
       <h2 class="title">
         Biblio<span class="color-primary">graphie</span>
       </h2>
@@ -65,34 +64,35 @@
           <li><a href="https://validator.w3.org/">Markup Validation Service</a></li>
           <li><a href="https://freefrontend.com/">Inspirations grapiques</a></li>
           <li><a href="formspree.io">Formulaires de contact</a></li>
+          <li><a href="https://css-tricks.com/styling-based-on-scroll-position/">Style basé sur la position du scroll</a></li>
           <li><a href="https://thomascardon.fr" target="_blank">Le site que j'avais créé pour mon projet Parcoursup</a></li>
         </ul>
       </div>
+    </main>
 
-      <footer>
-        <div class="child">
-          <span class="title">Adresse mail —</span>
-          <span>thomas.cardon@etu.univ-amu.fr</span>
-        </div>
-        <div class="child">
-          <span class="title">Mon adresse —</span>
-          <br>
-          <span>564 Avenue Gaston Berger</span>
-          <br>
-          <span>Appartement 354</span>
-          <br>
-          <span>13100 Aix-en-Provence</span>
-        </div>
-        <p class="child-large">
-          <em>
-            Ce site à été créé pendant l'hiver de 2020, et n'utilise que HTML5, CSS3, et JavaScript. J'ai une autre version de mon site personnel accessible
-            <a href="https://thomascardon.fr" target="_blank">ici</a>, qui utilisait d'autre technologies (NextJS, React), mais je pense qu'elle était hors sujet par rapport aux besoins du <a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">projet demandé</a>.
-            © Thomas Cardon — 2020
-          </em>
-        </p>
-      </footer>
-    </div>
-  </section>
-  <script src="./assets/js/scripts.js"></script>
+    <footer>
+      <address class="child">
+        <span class="title">Adresse mail —</span>
+        <a href="mailto:thomas.cardon@etu.univ-amu.fr">thomas.cardon@etu.univ-amu.fr</a>
+      </address>
+      <address class="child">
+        <span class="title">Mon adresse —</span>
+        <br>
+        <span>564 Avenue Gaston Berger</span>
+        <br>
+        <span>Appartement 354</span>
+        <br>
+        <span>13100 Aix-en-Provence</span>
+      </address>
+      <p class="child-large">
+        <em>
+        Ce site à été créé pendant l'hiver de 2020, et n'utilise que HTML5, CSS3, et JavaScript. J'ai une autre version de mon site personnel accessible
+        <a href="https://thomascardon.fr" target="_blank">ici</a>, qui utilisait d'autre technologies (NextJS, React), mais je pense qu'elle était hors sujet par rapport aux besoins du <a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">projet demandé</a>.
+        © Thomas Cardon — 2020
+        </em>
+      </p>
+    </footer>
+  </div>
+  <script src="./assets/js/themeChanger.js"></script>
 </body>
 </html>

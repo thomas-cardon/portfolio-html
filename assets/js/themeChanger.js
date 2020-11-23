@@ -17,3 +17,14 @@ if(!theme) {
 else {
   console.log('Loading theme:', theme);
 }
+
+// Permet de gérer du CSS en fonction du scroll de la page
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 150) document.documentElement.setAttribute('data-scroll', window.scrollY);
+  else document.documentElement.setAttribute('data-scroll', 0);
+});
+
+window.onbeforeunload = function () {
+  console.log('Scrolling back to top');
+  window.scroll(0, 0);
+}
