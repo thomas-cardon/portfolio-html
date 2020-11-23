@@ -67,16 +67,12 @@ h2.title {
   color: #fff;
 }
 
-.title-sm {
-  line-height: 1.15;
+.title.sm {
   font-size: 2rem;
-  letter-spacing: -0.02em;
-
   color: #fff;
 }
 
 .title,
-.title-sm,
 .status {
   text-align: center;
 }
