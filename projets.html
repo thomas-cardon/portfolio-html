@@ -17,6 +17,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
   <link rel="manifest" href="./assets/img/site.webmanifest">
 
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Feuilles de styles -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/projets.css">
@@ -40,23 +43,39 @@
 
       <nav>
         <div class="btn-highlight bg-secondary">
-          <a href="https://github.com/Ryzzzen" target="_blank">GitHub</a>
+          <a href="https://github.com/Ryzzzen" target="_blank">
+            <i class="fa fa-github"></i>&nbsp;Github
+          </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
-          <a href="#">Mes projets</a>
+          <a href="#">
+            <i class="fa fa-folder-open-o"></i>&nbsp;Projets
+          </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
-          <a href="./cv.html">Curriculum Vitae</a>
+          <a href="./cv.html">
+            <i class="fa fa-file-pdf-o"></i>&nbsp;CV
+          </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
-          <a href="./contact.html">Formulaire de contact</a>
+          <a href="./contact.html">
+            <i class="fa fa-comments-o"></i>&nbsp;Contact
+          </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
-          <a href="./bibliographie.html">Bibliographie</a>
+          <a href="./bibliographie.html">
+            <i class="fa fa-link"></i>&nbsp;Bibliographie
+          </a>
+        </div>
+
+        <div class="btn-highlight bg-secondary">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
       </nav>
     </header>
