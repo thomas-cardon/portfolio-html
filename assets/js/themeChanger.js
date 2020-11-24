@@ -9,12 +9,6 @@ function changeCSS(cssFile, cssLinkIndex) {
     document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
 }
 
-const nav = document.querySelector('nav');
-function myFunction() {
-  if (nav.className === "") nav.className = 'responsive';
-  else nav.className = '';
-}
-
 const theme = localStorage.getItem('theme');
 
 if(!theme) {
