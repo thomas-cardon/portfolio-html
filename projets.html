@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
-  <link rel="manifest" href="./assets/img/site.webmanifest">
+
 
   <!-- Font-Awesome, bibliothèque d'îcones -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -26,7 +26,7 @@
 </head>
 <body>
   <section class="video-container">
-    <video autoplay="" loop="" playsinline="" muted="" poster="https://thomascardon.now.sh/_next/static/public/assets/img/section-0-4533f5c3841cbcc056d49836b7e7c491.png.webp">
+    <video autoplay="" loop="" playsinline="" muted="" poster="https://thomascardon-old.now.sh/_next/static/public/assets/img/section-0-4533f5c3841cbcc056d49836b7e7c491.png.webp">
       <source src="./assets/videos/bg.webm" type="video/webm">
     </video>
 
@@ -74,15 +74,47 @@
       </nav>
     </header>
 
-    <main class="container">
-      <h2 class="title">
-        Mes pro<span class="color-primary">jets</span>
-      </h2>
-
+    <main class="container projets">
       <div class="grid">
-        <a href="https://github.com/Ryzzzen">
-          <img src="https://github-readme-stats.vercel.app/api?username=ryzzzen&count_private=true&show_icons=true&theme=dracula&hide_border=true&bg_color=000&locale=fr" style="margin-bottom: 1em;" />
-        </a>
+        <div id="profile">
+          <img id="userAvatar" alt="Photo" src="./assets/img/avatar.webp" />
+
+          <hr class="color-secondary" />
+
+          <h1 class="title">
+            Thomas <span class="color-primary">Cardon</span>
+          </h1>
+
+          <div class="bio">
+            <p id="text"></p>
+            <span>— GitHub</span>
+          </div>
+          <!--
+        </div>
+
+        <div class="cards md">
+          <div class="card sm">
+            <h1 style="color: #60A9F0;">Biographie</h1>
+            <h1 class="light">Extrait de Github</h1>
+            <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum pretium luctus. Ut at commodo erat. Fusce maximus fermentum pharetra. Vestibulum porta leo id mauris vestibulum ultrices. Nulla venenatis sollicitudin dui, vitae ullamcorper diam ornare ac. Integer quis tortor in turpis efficitur tincidunt. Nunc iaculis ut nibh et euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque malesuada, neque et tempor scelerisque, urna nulla dignissim orci, et elementum neque dolor eu leo.</p>
+          </div>
+
+          <div class="card bio">
+            <h1 class="light">Biographie</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum pretium luctus. Ut at commodo erat. Fusce maximus fermentum pharetra. Vestibulum porta leo id mauris vestibulum ultrices. Nulla venenatis sollicitudin dui, vitae ullamcorper diam ornare ac. Integer quis tortor in turpis efficitur tincidunt. Nunc iaculis ut nibh et euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque malesuada, neque et tempor scelerisque, urna nulla dignissim orci, et elementum neque dolor eu leo.</p>
+          </div>
+        </div>
+
+        <h2 class="title">
+          Mes pro<span class="color-primary">jets</span>
+        </h2>
+      -->
+          <span id="stats"></span>
+      </div>
+        <h2 class="title">
+          Mes pro<span class="color-primary">jets</span>
+        </h2>
+
         <div class="projet">
           <section>
             <h1 class="projet-titre">Manaflux</h1>
@@ -173,6 +205,7 @@
       </p>
     </footer>
   </div>
+  <script src="./assets/js/projects.js"></script>
   <script src="./assets/js/themeChanger.js"></script>
 </body>
 </html>
