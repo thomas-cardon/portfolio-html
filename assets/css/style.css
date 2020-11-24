@@ -42,12 +42,21 @@ body::-webkit-scrollbar-thumb {
   font-family: Perpetua;
 }
 
-/* Cards */
-.cards {
+/* Buttons */
+.buttons {
   display: flex;
-  align-items: start;
-  justify-content: center;
+  align-items: center;
   margin-bottom: 1.5rem;
+  font-size: 1.4em;
+
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.buttons > * {
+  flex: 1 0 auto;
 }
 
 /* Titles */
@@ -83,14 +92,13 @@ main {
 }
 
 .container {
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.container.max-vh {
+.max-vh {
   height: 100vh;
 }
 
@@ -117,18 +125,12 @@ a, .color-primary {
 }
 
 .grid {
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-    margin-top: 3rem;
-  }
 }
 
 .me {
@@ -154,13 +156,14 @@ img#avatar:hover {
 }
 
 .subtitle {
-  user-select: none;
+  width: 80%;
+  margin: 0 2em 2em 2em;
 
   font-family: "Heebo", "Helvetica Neue", system-ui;
   font-size: 2em;
+  text-align: center;
   line-height: 1.4em;
   letter-spacing: .04em;
-  color: #fff;
 }
 
 .description {
@@ -367,4 +370,49 @@ footer > .child:last-child {
 footer .title {
   font-family: "HeeboBold", sans-serif;
   font-size: larger;
+}
+
+/* Responsive fixes */
+@media (max-width: 600px) {
+  .me {
+    margin-top: 3em;
+    flex-direction: column;
+  }
+
+  .subtitle {
+    font-size: 1.3em;
+  }
+
+  .me:not(.sm) img#avatar {
+    margin-right: 0;
+  }
+
+  .grid {
+    margin-top: 3rem;
+  }
+
+  .max-vh {
+    height: auto;
+  }
+
+  .buttons {
+    flex-flow: column;
+  }
+
+  .buttons > * {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer > .child {
+    border: 0;
+  }
+
+  footer p {
+    font-size: 1.1em;
+  }
 }
