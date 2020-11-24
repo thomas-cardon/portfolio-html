@@ -172,12 +172,15 @@ img#avatar:hover {
   padding: 1.5em;
   margin-left: 1.5em;
   margin-right: 1.5em;
+}
 
-  font-family: "Heebo", system-ui;
-  font-size: 1.2em;
-
-  line-height: 1.4em;
-  letter-spacing: 0.04em;
+.description > p {
+  color: #ecf0f1;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  line-height: 24px;
+  text-align: justify;
+  word-spacing: 0.5rem;
 }
 
 /* Video background */

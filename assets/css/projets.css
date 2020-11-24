@@ -58,16 +58,6 @@
   text-align: center;
 }
 
-.projet p, li {
-  color: #ecf0f1;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  margin: 0 0 24px;
-  text-align: justify;
-  word-spacing: 0.5rem;
-}
-
 .projet ul {
   list-style-type: "💫";
   padding-left: 1em;
