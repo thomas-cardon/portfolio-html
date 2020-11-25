@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 function loadProfile(data) {
   document.getElementById('userAvatar').src = data.avatar_url;
   document.getElementById('text').innerText = '"' + data.bio + '"';
-  document.getElementById('stats').innerHTML = `${data.followers} followers <span class="color-primary">— suit ${data.following} personnes —</span> ${data.public_repos} repos publics`;
+  document.getElementById('stats').innerHTML = `${data.followers} followers <i class="fas fa-user-friends"></i> <span class="color-primary">— suit ${data.following} personnes <i class="fas fa-users"></i> —</span> ${data.public_repos} repos publics <i class="fas fa-code-branch"></i>`;
 
-  console.dir(data);
+  document.getElementById('profile').style.display = '';
 }
