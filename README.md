@@ -8,3 +8,5 @@
 - Retirer les classes inutiles (done?)
 - ~~Navbar fixe avec ancrages pour remonter~~
 - Désactiver les boutons par page
+- UI Chargement (surtout pour les projets)
+- Plusieurs langues
