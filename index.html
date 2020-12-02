@@ -52,11 +52,14 @@
 </style>
 </head>
 <body>
+  <div id="loading" class="container">
+    <div class="animated bounceInDown"></div>
+  </div>
   <div class="video-container">
     <video autoplay="" loop="" playsinline="" muted="" poster="https://thomascardon-old.now.sh/_next/static/public/assets/img/section-0-4533f5c3841cbcc056d49836b7e7c491.png.webp">
       <source src="./assets/videos/bg.webm" type="video/webm">
     </video>
-    <section class="container max-vh animated bounceInDown">
+    <div class="hide container max-vh animated bounceInDown">
       <div class="me">
         <img id="avatar" alt="Photo" src="./assets/img/avatar.webp" />
 
@@ -66,57 +69,65 @@
       </div>
 
       <p class="subtitle">
-        Etudiant de 19 ans à Aix-Marseille Université, département informatique
+        {{subtitle}}
       </p>
-    </section>
+    </div>
 
-    <section class="container max-vh">
+    <div class="hide container max-vh">
       <div class="grid">
         <nav class="buttons">
           <div class="btn-highlight bg-secondary">
             <a href="https://github.com/Ryzzzen" target="_blank">
-              <i class="fab fa-github"></i>&nbsp;Github
+              <i class="fab fa-github">&nbsp;</i>Github
             </a>
           </div>
 
           <div class="btn-highlight bg-secondary">
             <a href="./projets.html">
-              <i class="far fa-folder-open"></i>&nbsp;Projets
+              <i class="far fa-folder-open">&nbsp;</i>{{menu-projects}}
             </a>
           </div>
 
           <div class="btn-highlight bg-secondary">
             <a href="./cv.html">
-              <i class="far fa-file-pdf"></i>&nbsp;CV
+              <i class="far fa-file-pdf">&nbsp;</i>CV
             </a>
           </div>
 
           <div class="btn-highlight bg-secondary">
             <a href="./contact.html">
-              <i class="far fa-comments"></i>&nbsp;Contact
+              <i class="far fa-comments">&nbsp;</i>{{menu-contact}}
             </a>
           </div>
 
           <div class="btn-highlight bg-secondary">
             <a href="./bibliographie.html">
-              <i class="far fa-link"></i>&nbsp;Bibliographie
+              <i class="far fa-link">&nbsp;</i>{{menu-sources}}
             </a>
           </div>
         </nav>
         <div class="description">
-          <p class="alinea">Le secteur de l'informatique m'a toujours intéressé. Etant autodidacte, j'ai appris tout seul des langages de programmation afin de réussir les objectifs personnels que je m'étais donné. J'ai commencé à mes 13 ans à apprendre le langage de programmation Java afin de modifier le jeu Minecraft à ma guise.<br>J'ai ensuite commencé à faire des projets dans mon coin, des sites web statiques et dynamiques, avec des frameworks différents allant de jQuery à React en passant par JavaScript Vanilla et NodeJS, ainsi que des applications mobiles ou des applications Windows.</p>
-          <p class="alinea">Je suis actuellement en première année de DUT informatique, promotion de <b>2020-2021</b>.</p>
+          <section id="about-me">
+            <h3>{{about-me}}</h3>
+            <p class="alinea" data-i18n="">{{about-me.section}}</p>
+          </section>
+
+          <section id="description">
+            <h3 data-i18n="description">{{description}}</h3>
+            <p class="alinea" data-i18n="description.section">{{description.section}}</p>
+            <p>{{description.see-projects}}&nbsp;<a href="/projets.html">{{here|ici}}</a>.
+          </section>
         </div>
       </div>
-    </section>
+    </div>
 
-    <footer>
+    <footer class="hide">
       <address class="child">
-        <span class="title">Adresse mail —</span>
+        <p class="title" style="text-align: left;">{{footer.title.mail}}</p>
         <a href="mailto:thomas.cardon@etu.univ-amu.fr">thomas.cardon@etu.univ-amu.fr</a>
       </address>
       <address class="child">
-        <span class="title">Mon adresse —</span>
+        <span class="title">{{footer.title.address}}</span>
         <br>
         <span>564 Avenue Gaston Berger</span>
         <br>
@@ -126,13 +137,16 @@
       </address>
       <p class="child-large">
         <em>
-          Ce site à été créé pendant l'hiver de 2020, et n'utilise que HTML5, CSS3, et JavaScript. J'ai une autre version de mon site personnel accessible
-          <a href="https://thomascardon-old.now.sh/" target="_blank">ici</a>, qui utilisait d'autre technologies (NextJS, React), mais je pense qu'elle était hors sujet par rapport aux besoins du <a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">projet demandé</a>.
+          {{footer.description.1}}
+          <a href="https://thomascardon-old.now.sh/" target="_blank">{{here}}</a>{{footer.description.2}}<a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">{{footer.description.3}}</a>.
           © Thomas Cardon — 2020
         </em>
       </p>
     </footer>
   </div>
+
+  <script src="./assets/js/loading.js"></script>
+  <script src="./assets/js/i18n.js"></script>
   <script src="./assets/js/themeChanger.js"></script>
 </body>
 </html>
