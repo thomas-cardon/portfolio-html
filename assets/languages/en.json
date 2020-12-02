@@ -1,6 +1,18 @@
 {
+  "language": "English",
   "subtitle": "19 year-old student, currently at Aix-Marseille, IT dept.",
+  "here": "here",
   "menu-projects": "Projects",
   "menu-contact": "Contact",
-  "menu-sources": "Sources"
+  "menu-sources": "Sources",
+  "about-me": "About me",
+  "about-me.section": "I've always been curious; I've explored a lot of different stuff knowing well what I was about to become later.\nThat's how I got myself a few hobbies: biking, running, art (thanks to Art History, and thanks to the teacher that made Art and French interesting!) I'm fond of TV shows, movies and musics (but I guess that's our generation, with such platforms like Netflix or Spotify that made this kind of stuff reachable.)",
+  "description": "... And IT in all of this?",
+  "description.section": "I've always been interested in computer science. Being a self-taught, I've taught myself programming languages to be able to succeed in different objectives I had given myself. When I was 13, I started playing with the Java programming language, to modify the well-known video-game called Minecraft. Then I started making projects in my corner, from static websites to dynamic websites, using libraries like jQuery. Recently I learned React (+ NextJS), a really good framework to my mind because when you know how to use it, you can make stuff pretty easily. I've also done desktop apps using C#, but more recently using Electron and NodeJS.",
+  "description.see-projects": "You can take a look at the projects I've realized",
+  "footer.title.address": "My address",
+  "footer.title.mail": "Mail",
+  "footer.description.1": "This website has been created during the end of the year 2020. It uses only HTML5, CSS3, and JavaScript. I've got another version of my website ",
+  "footer.description.2": ", that used another technologies (NextJS, React), but it was irrelevant to the",
+  "footer.description.3": "project we've been asked to make."
 }
