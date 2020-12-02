@@ -11,15 +11,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   if (window.fetch) {
-      let res = await fetch('https://api.github.com/users/ryzzzen');
-      me = await res.json();
+    let res = await fetch('https://api.github.com/users/ryzzzen');
+    me = await res.json();
 
-      console.log('Downloading GitHub profile');
-      console.dir(me)
+    console.log('>> Téléchargement du profil GitHub');
+    console.dir(me)
 
-      sessionStorage.setItem('profile', JSON.stringify(me));
-  } else {
-      // Faire quelque chose avec XMLHttpRequest?
+    sessionStorage.setItem('profile', JSON.stringify(me));
+  }
+  else {
+    console.log('>> Impossible de télécharger profil GitHub');
   }
 
   loadProfile(me);
