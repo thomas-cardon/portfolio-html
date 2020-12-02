@@ -63,6 +63,7 @@ i18n.load = async () => {
 };
 
 i18n.updateDOM = () => {
+  // J'étais parti sur une mise-à-jour simple en prenant les élémants ayant un certain attribut, mais ça ne me laissait pas assez de liberté sans trop compliquer les choses à mon goût
   console.log('>> Updating DOM');
   document.body.innerHTML = i18n.render(document.body.innerHTML, i18n.lines);
   console.log('>> Updated DOM');
