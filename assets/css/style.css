@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb {
 
 .first-letter {
   font-size: xx-large;
-  font-family: Perpetua;
+  font-family: 'Perpetua', sans-serif;
 }
 
 /* Buttons */
@@ -149,7 +149,7 @@ main {
 }
 
 .card > h1:not(.light) {
-  font-family: 'HeeboBold';
+  font-family: 'HeeboBold', sans-serif;
   line-height: 0;
 }
 
@@ -169,7 +169,7 @@ a, .color-primary {
 }
 
 .color-secondary {
-  color: #f0ad4e;
+  color: #48E4FF;
   border-color: #f0ad4e;
   text-decoration: none;
 }
@@ -220,17 +220,27 @@ img#avatar:hover {
   background-color: rgba(0,0,0,.5);
 
   padding: 1.5em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-}
+  margin: auto 5em auto;
 
-.description > p {
   color: #ecf0f1;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 1em;
   line-height: 24px;
   text-align: justify;
   word-spacing: 0.5rem;
+}
+
+.description > section > h3 {
+  font-weight: lighter;
+  font-family: 'Heebo', system-ui;
+  font-size: 1.7em;
+  letter-spacing: 0.1em;
+
+  color: #48E4FF;
+}
+
+.description > section > p {
+  margin-top: 2em;
 }
 
 /* Video background */
@@ -387,7 +397,7 @@ form.contact > button {
 
   color: black;
 
-  font-family: "HeeboBold";
+  font-family: "HeeboBold", sans-serif;
   font-size: 1em;
   font-weight: 900;
   text-decoration: none;

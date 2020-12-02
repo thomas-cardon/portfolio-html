@@ -33,7 +33,7 @@
   padding: 1.25rem;
   margin-bottom: 1.25rem;
 
-  border: 1px solid #f0ad4e;
+  border: 1px solid #FFEC48;
   border-left-width: .25rem;
   border-radius: .25rem;
 
@@ -89,7 +89,7 @@
 }
 
 .projet h1 {
-  color: #EBB805;
+  color: #FFEC48;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 3em;
   font-weight: bold;
