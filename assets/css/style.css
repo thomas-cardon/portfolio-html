@@ -30,7 +30,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #f1c40f;
+  background-color: #ff9f43;
 
   border-radius: 25px;
 }
@@ -195,14 +195,14 @@ a {
 }
 
 a, .color-primary {
-  color: #ff6348;
-  border-color: #ff6348;
+  color: #ee5253;
+  border-color: #ee5253;
   text-decoration: none;
 }
 
 .color-secondary {
-  color: #48E4FF;
-  border-color: #f0ad4e;
+  color: #52EEED;
+  border-color: #1dd1a1;
   text-decoration: none;
 }
 
@@ -267,8 +267,6 @@ img#avatar:hover {
   font-family: 'Heebo', system-ui;
   font-size: 1.7em;
   letter-spacing: 0.1em;
-
-  color: #48E4FF;
 }
 
 .description > section > p {
