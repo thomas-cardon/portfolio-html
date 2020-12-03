@@ -2,6 +2,7 @@
   "language": "English",
   "subtitle": "19 year-old student, currently at Aix-Marseille, IT dept.",
   "here": "here",
+  "available": "available",
   "menu-projects": "Projects",
   "menu-contact": "Contact",
   "menu-sources": "Sources",
@@ -14,5 +15,19 @@
   "footer.title.mail": "Mail",
   "footer.description.1": "This website has been created during the end of the year 2020. It uses only HTML5, CSS3, and JavaScript. I've got another version of my website ",
   "footer.description.2": ", that used another technologies (NextJS, React), but it was irrelevant to the",
-  "footer.description.3": "project we've been asked to make."
+  "footer.description.3": "project we've been asked to make.",
+  "github.repo": "GitHub repo",
+  "github.contrib.unofficial.api": "Unofficial API Contribution",
+  "reddit.post": "Reddit Post",
+  "projects.header.1": "My pro",
+  "projects.header.2": "jects",
+  "projects.used.resources": "Used resources",
+  "projects.used.resources.pug": "Pug Render Engine",
+  "projects.used.resources.electron": "Cross-platform desktop apps framework using JavaScript, HTML, and CSS",
+  "projects.used.resources.nodejs": "Open source JavaScript environment running outside a web browser",
+  "projects.used.resources.nextjs": "An open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.",
+  "projects.1.desc": "I'm often playing with new players who doesn't have enough time to understand every aspect of the game, so this program handles those aspects automatically. By far my most popular project.",
+  "projects.2.desc": "A prototype that aggregates new mails and fetches Zoom/Google Meet links, and saves them in a database. The website, using NextJS+React shows those links and is linked to a Discord channel using webhooks.",
+  "projects.3.desc": "Reverse engineering of Pronote APIs to provide an interface more similar to the standards of recent years, plus an almost-instant loading and a few other interesting functionalities. Playground for HTTP/2, Progressive Web Apps, and Push Notifications",
+  "projects.4.desc": "Website that used to allow sync between user's players, so people could create a room, and watch a movie together, while being able to pause for everyone, etc. The website isn't open to public. Playground for NextJS, React, Material UI, and WebSocket."
 }
