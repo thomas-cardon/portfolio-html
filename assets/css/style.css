@@ -59,6 +59,36 @@ body::-webkit-scrollbar-thumb {
   100% { transform: rotate(360deg); }
 }
 
+
+#goToTop {
+  font-size: xx-large;
+
+  z-index: 99;
+  display: none;
+
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+  padding: 0.3em;
+
+  border: none;
+  border-radius: 5px;
+  outline: none;
+
+  background-color: #ff9f43;
+  cursor: pointer;
+  animation: fadeIn 0.5s linear;
+}
+
+#goToTop:hover {
+  background-color: #feca57;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @keyframes bounceInDown {
    0% {
       opacity: 0;
