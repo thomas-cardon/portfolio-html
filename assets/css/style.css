@@ -59,6 +59,32 @@ body::-webkit-scrollbar-thumb {
   100% { transform: rotate(360deg); }
 }
 
+@keyframes bounceInDown {
+   0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+   }
+   60% {
+      opacity: 1;
+      transform: translateY(30px);
+   }
+   80% {
+      transform: translateY(-10px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+
+.bounceInDown {
+   animation-name: bounceInDown;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
 /* Cette classe sert pour me faciliter la vie avec l'ajout du chargement */
 .hide {
   display: none !important;
