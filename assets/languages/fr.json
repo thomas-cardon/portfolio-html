@@ -24,5 +24,8 @@
   "projects.1.desc": "Un assistant pour aider les nouveaux joueurs à apprendre League of Legends. De loin mon projet le plus populaire. Ce projet n'est plus maintenu par manque de temps.",
   "projects.2.desc": "Un prototype me permettant de récupérer chaque mail de mon adresse mail universitaire et de les analyser afin de récupérer les liens et identifiants de réunions, et les affiche",
   "projects.3.desc": "Rétro-ingénierie des API Pronote afin de fournir une interface plus ressemblante aux standards de ces dernières années, avec un chargement presque instantané plus quelques fonctionnalités intéressantes. C'était mon terrain de jeu pour HTTP/2, les progressive web apps et les notification push",
-  "projects.4.desc": "Site web qui permettait la synchronisation des lecteurs vidéos avec tous ceux qui étaient connectés dans une même salle. Le site est encore disponible mais n'est pas ouvert au public. Terrain de jeu pour NextJS, React, Material UI, et WebSocket."
+  "projects.4.desc": "Site web qui permettait la synchronisation des lecteurs vidéos avec tous ceux qui étaient connectés dans une même salle. Le site est encore disponible mais n'est pas ouvert au public. Terrain de jeu pour NextJS, React, Material UI, et WebSocket.",
+  "cv.link.1": "You can access the file",
+  "cv.link.2": "if your browser doesn't show you the PDF here.",
+  "cv.updated": "Mis-à-jour l'été dernier"
 }

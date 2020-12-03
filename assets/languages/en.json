@@ -29,5 +29,8 @@
   "projects.1.desc": "I'm often playing with new players who doesn't have enough time to understand every aspect of the game, so this program handles those aspects automatically. By far my most popular project.",
   "projects.2.desc": "A prototype that aggregates new mails and fetches Zoom/Google Meet links, and saves them in a database. The website, using NextJS+React shows those links and is linked to a Discord channel using webhooks.",
   "projects.3.desc": "Reverse engineering of Pronote APIs to provide an interface more similar to the standards of recent years, plus an almost-instant loading and a few other interesting functionalities. Playground for HTTP/2, Progressive Web Apps, and Push Notifications",
-  "projects.4.desc": "Website that used to allow sync between user's players, so people could create a room, and watch a movie together, while being able to pause for everyone, etc. The website isn't open to public. Playground for NextJS, React, Material UI, and WebSocket."
+  "projects.4.desc": "Website that used to allow sync between user's players, so people could create a room, and watch a movie together, while being able to pause for everyone, etc. The website isn't open to public. Playground for NextJS, React, Material UI, and WebSocket.",
+  "cv.link.1": "You can access the file",
+  "cv.link.2": "if your browser doesn't show you the PDF here.",
+  "cv.updated": "Updated last summer"
 }

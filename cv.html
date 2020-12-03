@@ -24,12 +24,16 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <section class="video-container">
+  <div id="loading" class="container">
+    <div class="animated bounceInDown"></div>
+  </div>
+
+  <div class="video-container">
     <video autoplay="" loop="" playsinline="" muted="" poster="https://thomascardon-old.now.sh/_next/static/public/assets/img/section-0-4533f5c3841cbcc056d49836b7e7c491.png.webp">
       <source src="./assets/videos/bg.webm" type="video/webm">
     </video>
 
-    <header class="sm">
+    <header class="hide sm">
       <a href="./index.html">
         <div class="me">
           <img id="avatar" class="sm" alt="Photo" src="./assets/img/avatar.webp" />
@@ -49,53 +53,53 @@
 
         <div class="btn-highlight bg-secondary">
           <a href="./projets.html">
-            <i class="far fa-folder-open"></i>&nbsp;Projets
+            <i class="far fa-folder-open">&nbsp;</i>{{menu-projects}}
           </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
           <a href="./cv.html">
-            <i class="far fa-file-pdf"></i>&nbsp;CV
+            <i class="far fa-file-pdf">&nbsp;</i>CV
           </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
           <a href="./contact.html">
-            <i class="far fa-comments"></i>&nbsp;Contact
+            <i class="far fa-comments">&nbsp;</i>{{menu-contact}}
           </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
           <a href="./bibliographie.html">
-            <i class="far fa-link"></i>&nbsp;Bibliographie
+            <i class="fas fa-link">&nbsp;</i>{{menu-sources}}
           </a>
         </div>
       </nav>
     </header>
 
-    <main class="container">
+    <main class="hide container">
       <h2 class="title">
         Curriculum <span class="color-primary">Vitae</span>
       </h2>
 
       <p class="subtitle">
-        — <em>Mis-à-jour l'été dernier</em>
+        — <em>{{cv.updated}}</em>
         <br>
       </p>
 
       <iframe src="https://drive.google.com/file/d/155h15Kp8dAWtxWtTlMzWjNOzVETWgte0/preview" width="50%" height="800px"></iframe>
       <p>
-        <small>Vous pouvez y accéder <a href="https://drive.google.com/file/d/155h15Kp8dAWtxWtTlMzWjNOzVETWgte0/preview" target="_blank">ici</a> si votre navigateur ne fait pas le rendu correctement.</small>
+        <small>{{cv.link.1}} <a href="https://drive.google.com/file/d/155h15Kp8dAWtxWtTlMzWjNOzVETWgte0/preview" target="_blank">{{here}}</a> .</small>
       </p>
     </main>
 
-    <footer>
+    <footer class="hide">
       <address class="child">
-        <span class="title">Adresse mail —</span>
+        <p class="title" style="text-align: left;">{{footer.title.mail}}</p>
         <a href="mailto:thomas.cardon@etu.univ-amu.fr">thomas.cardon@etu.univ-amu.fr</a>
       </address>
       <address class="child">
-        <span class="title">Mon adresse —</span>
+        <span class="title">{{footer.title.address}}</span>
         <br>
         <span>564 Avenue Gaston Berger</span>
         <br>
@@ -105,13 +109,16 @@
       </address>
       <p class="child-large">
         <em>
-          Ce site à été créé pendant l'hiver de 2020, et n'utilise que HTML5, CSS3, et JavaScript. J'ai une autre version de mon site personnel accessible
-          <a href="https://thomascardon-old.now.sh/" target="_blank">ici</a>, qui utilisait d'autre technologies (NextJS, React), mais je pense qu'elle était hors sujet par rapport aux besoins du <a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">projet demandé</a>.
+          {{footer.description.1}}
+          <a href="https://thomascardon-old.now.sh/" target="_blank">{{here}}</a>{{footer.description.2}}<a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">{{footer.description.3}}</a>.
           © Thomas Cardon — 2020
         </em>
       </p>
     </footer>
   </div>
+  <script src="./assets/js/loading.js"></script>
+  <script src="./assets/js/i18n.js"></script>
+
   <script src="./assets/js/themeChanger.js"></script>
 </body>
 </html>
