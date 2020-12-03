@@ -11,5 +11,5 @@
 - Projet: images de même taille
 - Désactiver les boutons par page
 - UI Chargement (surtout pour les projets)
-- Plusieurs langues
+- ~~Plusieurs langues~~ (WIP)
 - Flèche au index.html pour montrer qu'on peut descendre

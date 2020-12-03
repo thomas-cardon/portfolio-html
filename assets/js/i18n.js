@@ -35,7 +35,7 @@ const i18n = {
   }
 };
 
-i18n.load = async () => {
+i18n.load = async function load() {
   let lines = sessionStorage.getItem('language-lines');
   if (lines) {
     i18n.lines = JSON.parse(lines);
@@ -66,7 +66,7 @@ i18n.load = async () => {
   return i18n;
 };
 
-i18n.updateDOM = () => {
+i18n.updateDOM = function updateDOM() {
   // J'étais parti sur une mise-à-jour simple en prenant les élémants ayant un certain attribut, mais ça ne me laissait pas assez de liberté sans trop compliquer les choses à mon goût
   console.log('>> Updating DOM');
   document.body.innerHTML = i18n.render(document.body.innerHTML, i18n.lines);
@@ -74,3 +74,6 @@ i18n.updateDOM = () => {
 }
 
 window.i18n = i18n;
+
+LoadingQ.push(i18n.load, i18n);
+LoadingQ.push(i18n.updateDOM, i18n);
