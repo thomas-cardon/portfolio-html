@@ -27,7 +27,7 @@
   "projects.header.2": "jects",
   "projects.used.resources": "Used resources",
   "projects.used.resources.pug": "Pug Render Engine",
-  "projects.used.resources.electron": "Cross-platform desktop apps framework using JavaScript, HTML, and CSS",
+  "projects.used.resources.electron": "Cross-platform desktop apps framework using HTML/JS/CSS",
   "projects.used.resources.nodejs": "Open source JavaScript environment running outside a web browser",
   "projects.used.resources.nextjs": "An open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.",
   "projects.1.desc": "I'm often playing with new players who doesn't have enough time to understand every aspect of the game, so this program handles those aspects automatically. By far my most popular project.",

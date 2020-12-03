@@ -49,9 +49,10 @@
 }
 
 .projet {
-  background-color: rgba(0,0,0,.5);
-  padding: 1.5em;
+  width: 85vw;
   margin: 0 1.5em 1.5em 1.5em;
+
+  background-color: rgba(0,0,0,.5);
 
   color: whitesmoke;
   letter-spacing: 0.04em;
@@ -64,7 +65,7 @@
 
 .projet > section {
   flex: 2;
-  margin-right: 1em;
+  margin: 0 3em;
 }
 
 .projet > img {
@@ -111,6 +112,9 @@
 .projet ul {
   list-style-type: "💫";
   padding-left: 1em;
+
+  font-size: 0.7em;
+  font-family: 'Heebo', system-ui;
 }
 
 .projet li {
