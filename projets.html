@@ -18,19 +18,23 @@
 
 
   <!-- Font-Awesome, bibliothèque d'îcones -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
 
   <!-- Feuilles de styles -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/projets.css">
 </head>
 <body>
+  <div id="loading" class="container">
+    <div class="animated bounceInDown"></div>
+  </div>
+
   <section class="video-container">
     <video autoplay="" loop="" playsinline="" muted="" poster="https://thomascardon-old.now.sh/_next/static/public/assets/img/section-0-4533f5c3841cbcc056d49836b7e7c491.png.webp">
       <source src="./assets/videos/bg.webm" type="video/webm">
     </video>
 
-    <header class="sm">
+    <header class="hide animated bounceInDown sm">
       <a href="./index.html">
         <div class="me">
           <img id="avatar" class="sm" alt="Photo" src="./assets/img/avatar.webp" />
@@ -74,7 +78,7 @@
       </nav>
     </header>
 
-    <main class="container projets">
+    <main class="hide container projets">
       <div class="grid max-vh" style="align-items: unset;">
         <div id="profile" style="display: none;">
           <img id="userAvatar" alt="Photo" />
@@ -89,52 +93,32 @@
             <p id="text"></p>
             <span>— GitHub</span>
           </div>
-          <!--
-        </div>
-
-        <div class="cards md">
-          <div class="card sm">
-            <h1 style="color: #60A9F0;">Biographie</h1>
-            <h1 class="light">Extrait de Github</h1>
-            <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum pretium luctus. Ut at commodo erat. Fusce maximus fermentum pharetra. Vestibulum porta leo id mauris vestibulum ultrices. Nulla venenatis sollicitudin dui, vitae ullamcorper diam ornare ac. Integer quis tortor in turpis efficitur tincidunt. Nunc iaculis ut nibh et euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque malesuada, neque et tempor scelerisque, urna nulla dignissim orci, et elementum neque dolor eu leo.</p>
-          </div>
-
-          <div class="card bio">
-            <h1 class="light">Biographie</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum pretium luctus. Ut at commodo erat. Fusce maximus fermentum pharetra. Vestibulum porta leo id mauris vestibulum ultrices. Nulla venenatis sollicitudin dui, vitae ullamcorper diam ornare ac. Integer quis tortor in turpis efficitur tincidunt. Nunc iaculis ut nibh et euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque malesuada, neque et tempor scelerisque, urna nulla dignissim orci, et elementum neque dolor eu leo.</p>
-          </div>
-        </div>
-
-        <h2 class="title">
-          Mes pro<span class="color-primary">jets</span>
-        </h2>
-      -->
           <span id="stats"></span>
         </div>
       </div>
       <div class="grid">
         <h2 class="title">
-          Mes pro<span class="color-primary">jets</span>
+          {{projects.header.1}}<span class="color-primary">{{projects.header.2}}</span>
         </h2>
 
         <div class="projet">
           <section>
             <h1 class="projet-titre">Manaflux</h1>
             <p>
-              <em>Un assistant pour aider les nouveaux joueurs à apprendre League of Legends. De loin mon projet le plus populaire. Ce projet n'est plus maintenu par manque de temps.</em>
+              <em>{{projects.1.desc}}</em>
             </p>
             <hr>
-            <h2>Ressources utilisées</h2>
+            <h2>{{projects.used.resources}}</h2>
             <ul>
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript — <em>ES7</em></li>
-              <li>Electron V8 — <em>Framework pour applications de bureau multiplateformes</em></li>
-              <li>Node.js V10 — <em>JavaScript côté serveur</em></li>
-              <li>League Client API — accessible <em><a href="https://developer.riotgames.com/docs/lol#league-client-api" target="_blank">ici</a></em></li>
+              <li>Electron V8 — <em>{{projects.used.resources.electron}}</em></li>
+              <li>Node.js V10 — <em>{{projects.used.resources.nodejs}}</em></li>
+              <li>League Client API — {{available}} <em><a href="https://developer.riotgames.com/docs/lol#league-client-api" target="_blank">{{here}}</a></em></li>
               <br>
-              <li>Répertoire GitHub — accessible <em><a href="https://github.com/Ryzzzen/manaflux" target="_blank">ici</a></em></li>
-              <li>Post Reddit — accessible <em><a href="https://www.reddit.com/r/leagueoflegends/comments/97s4co/so_i_created_a_program_that_automatically_handles/" target="_blank">ici</a></em></li>
+              <li>{{github.repo}} — {{available}} <em><a href="https://github.com/Ryzzzen/manaflux" target="_blank">{{here}}</a></em></li>
+              <li>{{reddit.post}} — {{available}} <em><a href="https://www.reddit.com/r/leagueoflegends/comments/97s4co/so_i_created_a_program_that_automatically_handles/" target="_blank">{{here}}</a></em></li>
             </ul>
           </section>
           <img draggable="false" src="https://thomascardon-old.now.sh/_next/static/public/assets/img/manaflux-1-c366ca934663d38243c90c14d9fd5006.png" alt="Capture d'écran de Manaflux" />
@@ -144,16 +128,16 @@
           <section>
             <h1 class="projet-titre">Page de liens Zoom</h1>
             <p>
-              <em>Un prototype me permettant de récupérer chaque mail de mon adresse mail universitaire et de les analyser afin de récupérer les liens et identifiants de réunions, et les affiche.</em>
+              <em>{{projects.2.desc}}</em>
             </p>
             <hr>
-            <h2>Ressources utilisées</h2>
+            <h2>{{projects.used.resources}}</h2>
             <ul>
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript — <em>ES7</em></li>
-              <li>NextJS + React — <em>NextJS permet un rendu côté serveur afin de générer des versions statiques d'applications React, mais aussi d'héberger vos sites depuis un répertoire GitHub avec déploiement automatique.</em></li>
-              <li>Node.js V10 — <em>JavaScript côté serveur</em></li>
+              <li>NextJS + React — <em>{{projects.used.resources.nextjs}}</em></li>
+              <li>Node.js V10 — <em>{{projects.used.resources.nodejs}}</em></li>
               <li>node-imap — <em>Module client IMAP pour Node.js</em></li>
             </ul>
           </section>
@@ -164,18 +148,18 @@
           <section>
             <h1 class="projet-titre">PronoteX</h1>
             <p>
-              <em>Rétro-ingénierie des API Pronote afin de fournir une interface plus ressemblante aux standards de ces dernières années, avec un chargement presque instantané plus quelques fonctionnalités intéressantes. C'était mon terrain de jeu pour HTTP/2, les progressive web apps et les notification push.</em>
+              <em>{{projects.3.desc}}</em>
             </p>
             <hr>
-            <h2>Ressources utilisées</h2>
+            <h2>{{projects.used.resources}}</h2>
             <ul>
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript — <em>ES7</em></li>
               <li>Progressive Web App</li>
-              <li>Node.js V10 — <em><a href="https://nodejs.org/en/docs/guides/getting-started-guide/" target="_blank">JavaScript côté serveur</a></em></li>
-              <li>Moteur de rendu Pug — accessible <em><a href="https://pugjs.org/api/getting-started.html" target="_blank">ici</a></em></li>
-              <li>Contribution à l'API non officielle <em><a href="https://github.com/Litarvan/pronote-api" target="_blank">Pronote-API</a></em></li>
+              <li>Node.js V10 — <em><a href="https://nodejs.org/en/docs/guides/getting-started-guide/" target="_blank">{{projects.used.resources.nodejs}}</a></em></li>
+              <li>Pug — <em>{{projects.used.resources.pug}} {{available}} <a href="https://pugjs.org/api/getting-started.html" target="_blank">{{here}}</a></em></li>
+              <li>{{github.contrib.unofficial.api}} <em><a href="https://github.com/Litarvan/pronote-api" target="_blank">Pronote-API</a></em></li>
             </ul>
           </section>
           <img draggable="false" src="https://thomascardon-old.now.sh/_next/static/public/assets/img/pronote-x-1-c52f75949f997173b18c951a82994e53.png.webp" alt="Capture d'écran de PronoteX" />
@@ -185,18 +169,17 @@
           <section>
             <h1 class="projet-titre">Assemble</h1>
             <p>
-              <em>Site web qui permettait la synchronisation des lecteurs vidéos avec tous ceux qui étaient connectés dans une même salle. Le site est encore disponible mais n'est pas ouvert au public. Terrain de jeu pour NextJS, React, Material UI, et WebSocket.</em>
+              <em>{{projects.4.desc}}</em>
             </p>
             <hr>
-            <h2>Ressources utilisées</h2>
+            <h2>{{projects.used.resources}}</h2>
             <ul>
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript — <em>ES7</em></li>
               <li>Progressive Web App</li>
-              <li>Node.js V10 — <em><a href="https://nodejs.org/en/docs/guides/getting-started-guide/" target="_blank">JavaScript côté serveur</a></em></li>
-              <li>Moteur de rendu Pug — accessible <em><a href="https://pugjs.org/api/getting-started.html" target="_blank">ici</a></em></li>
-              <li>Contribution à l'API non officielle <em><a href="https://github.com/Litarvan/pronote-api" target="_blank">Pronote-API</a></em></li>
+              <li>Node.js V10 — <em><a href="https://nodejs.org/en/docs/guides/getting-started-guide/" target="_blank">{{projects.used.resources.nodejs}}</a></em></li>
+              <li>NextJS + React — <em>{{projects.used.resources.nextjs}}</em></li>
             </ul>
           </section>
           <img draggable="false" src="https://thomascardon-old.now.sh/_next/static/public/assets/img/assemble-1-1f1d8c93f6a520f382faca5d1495d894.png.webp" alt="Capture d'écran de Assemble" />
@@ -204,13 +187,13 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="hide">
       <address class="child">
-        <span class="title">Adresse mail —</span>
+        <p class="title" style="text-align: left;">{{footer.title.mail}}</p>
         <a href="mailto:thomas.cardon@etu.univ-amu.fr">thomas.cardon@etu.univ-amu.fr</a>
       </address>
       <address class="child">
-        <span class="title">Mon adresse —</span>
+        <span class="title">{{footer.title.address}}</span>
         <br>
         <span>564 Avenue Gaston Berger</span>
         <br>
@@ -220,13 +203,16 @@
       </address>
       <p class="child-large">
         <em>
-          Ce site à été créé pendant l'hiver de 2020, et n'utilise que HTML5, CSS3, et JavaScript. J'ai une autre version de mon site personnel accessible
-          <a href="https://thomascardon-old.now.sh/" target="_blank">ici</a>, qui utilisait d'autre technologies (NextJS, React), mais je pense qu'elle était hors sujet par rapport aux besoins du <a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">projet demandé</a>.
+          {{footer.description.1}}
+          <a href="https://thomascardon-old.now.sh/" target="_blank">{{here}}</a>{{footer.description.2}}<a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">{{footer.description.3}}</a>.
           © Thomas Cardon — 2020
         </em>
       </p>
     </footer>
   </div>
+  <script src="./assets/js/loading.js"></script>
+  <script src="./assets/js/i18n.js"></script>
+
   <script src="./assets/js/projects.js"></script>
   <script src="./assets/js/themeChanger.js"></script>
 </body>
