@@ -22,7 +22,7 @@ const i18n = {
     for (const match of matches) {
       if (data[match[1]]) string = string.replace(match[0], data[match[1]]);
       else {
-        console.warn('Rendu ->', match[1], ':', 'aucun remplacement trouvé');
+        console.warn('i18n ->', match[1], ':', 'aucun remplacement trouvé');
       }
     }
 
