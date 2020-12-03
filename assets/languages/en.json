@@ -32,5 +32,11 @@
   "projects.4.desc": "Website that used to allow sync between user's players, so people could create a room, and watch a movie together, while being able to pause for everyone, etc. The website isn't open to public. Playground for NextJS, React, Material UI, and WebSocket.",
   "cv.link.1": "You can access the file",
   "cv.link.2": "if your browser doesn't show you the PDF here.",
-  "cv.updated": "Updated last summer"
+  "cv.updated": "Updated last summer",
+  "contact.form.1": "Contact",
+  "contact.form.2": "form",
+  "contact.form.label.mail": "Mail address",
+  "contact.form.label.message": "Message",
+  "contact.form.submit": "Submit",
+  "contact.form.open.client": "Open mail client"
 }

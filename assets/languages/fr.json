@@ -27,5 +27,11 @@
   "projects.4.desc": "Site web qui permettait la synchronisation des lecteurs vidéos avec tous ceux qui étaient connectés dans une même salle. Le site est encore disponible mais n'est pas ouvert au public. Terrain de jeu pour NextJS, React, Material UI, et WebSocket.",
   "cv.link.1": "You can access the file",
   "cv.link.2": "if your browser doesn't show you the PDF here.",
-  "cv.updated": "Mis-à-jour l'été dernier"
+  "cv.updated": "Mis-à-jour l'été dernier",
+  "contact.form.1": "Formulaire de",
+  "contact.form.2": "Contact",
+  "contact.form.label.mail": "Adresse mail",
+  "contact.form.label.message": "Message",
+  "contact.form.submit": "Envoyer",
+  "contact.form.open.client": "Ouvrir le client de messagerie"
 }
