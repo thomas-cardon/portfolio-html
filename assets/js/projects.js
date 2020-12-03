@@ -1,4 +1,3 @@
-const github = document.getElementById('profile');
 window.me = {};
 
 function loadProfile() {
@@ -14,6 +13,13 @@ function loadProfile() {
   });
 };
 
+/*
+* Cette fonction me permet de récupérer les données depuis l'API Github publique,
+* de les stocker en cache dans sessionStorage,
+* pour: -> ne pas à exécuter fetch à chaque rechargement de page
+*       -> ne pas surcharger l'API publique et me faire rate-limit
+*       -> économiser les ressources réseau
+*/
 LoadingQ.push(async () => {
   let data = sessionStorage.getItem('profile');
 
