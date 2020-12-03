@@ -13,18 +13,22 @@ const i18n = {
    * A cause du Cross-origin resource sharing
   */
   refs: {
-    en: 'https://api.jsonbin.io/b/5fc80228045eb86f1f8a477f/1'
+    en: 'https://api.jsonbin.io/b/5fc7a15e9abe4f6e7cae97b9/3',
+    fr: 'https://api.jsonbin.io/b/5fc8c9709abe4f6e7caf0062'
   },
   render: function (string, data) {
-    let re = /{{([^}}]+)?}}/g, match;
-    while(match = re.exec(string)) {
-      let entry = match[1].split('|');
+    let re = /{{([^}}]+)?}}/g, matches = string.matchAll(re);
 
-      if (data[entry[0]]) string = string.replace(match[0], data[entry[0]])
+    for (const match of matches) {
+      if (data[match[1]]) string = string.replace(match[0], data[match[1]]);
       else {
-        if (entry[1]) string = string.replace(match[0], entry[1]);
-        else console.warn('Rendu ->', entry[0], ':', 'aucun remplacement trouvé');
+        console.warn('Rendu ->', match[1], ':', 'aucun remplacement trouvé');
       }
+    }
+
+    while(false) {//match = re.exec(string)) {
+      console.dir(match);
+
     }
 
     return string;
