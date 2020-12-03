@@ -74,6 +74,3 @@ i18n.updateDOM = function updateDOM() {
 }
 
 window.i18n = i18n;
-
-LoadingQ.push(i18n.load, i18n);
-LoadingQ.push(i18n.updateDOM, i18n);
