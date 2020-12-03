@@ -415,6 +415,12 @@ nav.buttons {
 
 /* Formulaire de contact */
 form.contact {
+  padding: 1.5em;
+  word-spacing: 0.5rem;
+
+  color: #ecf0f1;
+  background-color: rgba(0,0,0,.5);
+
   display: flex;
   flex-direction: column;
 }

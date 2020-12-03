@@ -83,21 +83,19 @@
         {{contact.form.1}}&nbsp;<span class="color-primary">{{contact.form.2}}</span>
       </h2>
 
-      <div class="description">
-        <!-- formspree.io permet d'envoyer un mail directement sans avoir à ouvrir un client de messagerie -->
-        <form class="contact login-box" action="https://formspree.io/f/xdopdgwo" method="POST">
-          <div class="user-box">
-            <label>{{contact.form.label.mail}}</label>
-            <input type="email" name="_replyto" placeholder="Tapez ici">
-          </div>
-          <div class="user-box">
-            <label>{{contact.form.label.message}}</label>
-            <textarea name="message" placeholder="Tapez ici"></textarea>
-          </div>
-          <button type="submit">{{contact.form.submit}}</a>
-          <button onclick="location.href = 'mailto:thomas.cardon@pm.me'; return false;">{{contact.form.open.client}}</button>
-        </form>
-      </div>
+      <!-- formspree.io permet d'envoyer un mail directement sans avoir à ouvrir un client de messagerie -->
+      <form class="contact login-box" action="https://formspree.io/f/xdopdgwo" method="POST">
+        <div class="user-box">
+          <label>{{contact.form.label.mail}}</label>
+          <input type="email" name="_replyto" placeholder="Tapez ici">
+        </div>
+        <div class="user-box">
+          <label>{{contact.form.label.message}}</label>
+          <textarea name="message" placeholder="Tapez ici"></textarea>
+        </div>
+        <button type="submit">{{contact.form.submit}}</a>
+        <button onclick="location.href = 'mailto:thomas.cardon@pm.me'; return false;">{{contact.form.open.client}}</button>
+      </form>
     </main>
 
     <footer class="hide">
