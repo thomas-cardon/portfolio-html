@@ -38,5 +38,16 @@
   "contact.form.label.mail": "Mail address",
   "contact.form.label.message": "Message",
   "contact.form.submit": "Submit",
-  "contact.form.open.client": "Open mail client"
+  "contact.form.open.client": "Open mail client",
+  "sources.header.1": "Sour",
+  "sources.header.2": "ces",
+  "sources.link.1": "The best website to keep notes I believe",
+  "sources.link.2": "Panda - a news tech/design/dev feed",
+  "sources.link.3": "Flat UI Colors 2",
+  "sources.link.4": "How to: CSS Loader (W3Schools)",
+  "sources.link.5": "Markup Validation Service",
+  "sources.link.6": "Graphic inspirations",
+  "sources.link.7": "Contact form",
+  "sources.link.8": "Templating Engine (inspired from this to created i18n script)",
+  "sources.link.9": "The website I had created for my Parcoursup project"
 }

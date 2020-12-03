@@ -25,11 +25,15 @@
 </head>
 <body>
   <div class="video-container">
+    <div id="loading" class="container">
+      <div class="animated bounceInDown"></div>
+    </div>
+  
     <video autoplay="" loop="" playsinline="" muted="" poster="https://thomascardon-old.now.sh/_next/static/public/assets/img/section-0-4533f5c3841cbcc056d49836b7e7c491.png.webp">
       <source src="./assets/videos/bg.webm" type="video/webm">
     </video>
 
-    <header class="sm">
+    <header class="hide sm">
       <a href="./index.html">
         <div class="me">
           <img id="avatar" class="sm" alt="Photo" src="./assets/img/avatar.webp" />
@@ -49,57 +53,57 @@
 
         <div class="btn-highlight bg-secondary">
           <a href="./projets.html">
-            <i class="far fa-folder-open"></i>&nbsp;Projets
+            <i class="far fa-folder-open">&nbsp;</i>{{menu-projects}}
           </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
           <a href="./cv.html">
-            <i class="far fa-file-pdf"></i>&nbsp;CV
+            <i class="far fa-file-pdf">&nbsp;</i>CV
           </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
           <a href="./contact.html">
-            <i class="far fa-comments"></i>&nbsp;Contact
+            <i class="far fa-comments">&nbsp;</i>{{menu-contact}}
           </a>
         </div>
 
         <div class="btn-highlight bg-secondary">
           <a href="./bibliographie.html">
-            <i class="far fa-link"></i>&nbsp;Bibliographie
+            <i class="fas fa-link">&nbsp;</i>{{menu-sources}}
           </a>
         </div>
       </nav>
     </header>
 
-    <main class="container">
+    <main class="hide container">
       <h2 class="title">
-        Biblio<span class="color-primary">graphie</span>
+        {{sources.header.1}}<span class="color-primary">{{sources.header.2}}</span>
       </h2>
 
       <div class="description">
         <ul>
-          <li><a href="http://notion.com/" target="_blank">Le meilleur site à mes yeux pour tenir ses notes</a></li>
-          <li><a href="https://app.usepanda.com/#/" target="_blank">Panda - un feed de news tech/design/dev</a></li>
-          <li><a href="https://flatuicolors.com/palette/" target="_blank">Flat UI Colors 2 </a></li>
-          <li><a href="https://www.w3schools.com/howto/howto_css_loader.asp">How to: CSS Loader (W3Schools)</li>
-          <li><a href="https://validator.w3.org/">Markup Validation Service</a></li>
-          <li><a href="https://freefrontend.com/">Inspirations grapiques</a></li>
-          <li><a href="formspree.io">Formulaires de contact</a></li>
-          <li><a href="https://css-tricks.com/styling-based-on-scroll-position/">Style basé sur la position du scroll</a></li>
-          <li><a href="https://thomascardon-old.now.sh/" target="_blank">Le site que j'avais créé pour mon projet Parcoursup</a></li>
+          <li><a href="http://notion.com/" target="_blank">{{sources.link.1}}</a></li>
+          <li><a href="https://app.usepanda.com/#/" target="_blank">{{sources.link.2}}</a></li>
+          <li><a href="https://flatuicolors.com/palette/" target="_blank">{{sources.link.3}}</a></li>
+          <li><a href="https://www.w3schools.com/howto/howto_css_loader.asp">{{sources.link.4}}</a></li>
+          <li><a href="https://validator.w3.org/">{{sources.link.5}}</a></li>
+          <li><a href="https://freefrontend.com/">{{sources.link.6}}</a></li>
+          <li><a href="https://formspree.io">{{sources.link.7}}</a></li>
+          <li><a href="https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line">{{sources.link.8}}</a></li>
+          <li><a href="https://thomascardon-old.now.sh/" target="_blank">{{sources.link.9}}</a></li>
         </ul>
       </div>
     </main>
 
-    <footer>
+    <footer class="hide">
       <address class="child">
-        <span class="title">Adresse mail —</span>
+        <p class="title" style="text-align: left;">{{footer.title.mail}}</p>
         <a href="mailto:thomas.cardon@etu.univ-amu.fr">thomas.cardon@etu.univ-amu.fr</a>
       </address>
       <address class="child">
-        <span class="title">Mon adresse —</span>
+        <span class="title">{{footer.title.address}}</span>
         <br>
         <span>564 Avenue Gaston Berger</span>
         <br>
@@ -109,13 +113,16 @@
       </address>
       <p class="child-large">
         <em>
-        Ce site à été créé pendant l'hiver de 2020, et n'utilise que HTML5, CSS3, et JavaScript. J'ai une autre version de mon site personnel accessible
-        <a href="https://thomascardon-old.now.sh/" target="_blank">ici</a>, qui utilisait d'autre technologies (NextJS, React), mais je pense qu'elle était hors sujet par rapport aux besoins du <a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">projet demandé</a>.
-        © Thomas Cardon — 2020
+          {{footer.description.1}}
+          <a href="https://thomascardon-old.now.sh/" target="_blank">{{here}}</a>{{footer.description.2}}<a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">{{footer.description.3}}</a>.
+          © Thomas Cardon — 2020
         </em>
       </p>
     </footer>
   </div>
+  <script src="./assets/js/loading.js"></script>
+  <script src="./assets/js/i18n.js"></script>
+
   <script src="./assets/js/themeChanger.js"></script>
 </body>
 </html>
