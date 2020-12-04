@@ -6,7 +6,7 @@
 
 /* i18n pour internationalisation (18 représentant le nombre de caractères entre le i & le n)*/
 const i18n = {
-  lang: localStorage.getItem('language') || navigator.language || 'en',
+  lang: localStorage.getItem('language') || 'en',
   baseUrl: window.location.href.substring(0, window.location.href.lastIndexOf('/')),
   /*
    * Les langues sont publiées sur un hosting de fichiers JSON public parce que Chrome ne veut pas me laisser lire un fichier JSON avec le protocole file://
@@ -31,6 +31,13 @@ const i18n = {
 };
 
 i18n.load = async function load() {
+  const el = document.querySelector('a[data-lang="' + i18n.lang + '"]');
+  if (!el) {
+    i18n.lang = 'en';
+    console.warn("Cette langue n'est pas reconnue! Utilisation de la langue: en");
+  }
+  else el.textContent += ' ✅';
+
   let lines = sessionStorage.getItem('language-lines');
   if (lines) {
     i18n.lines = JSON.parse(lines);
@@ -56,7 +63,6 @@ i18n.load = async function load() {
   });
 
   i18n.lines = await r.json();
-  console.dir(i18n.lines);
 
   /* On sauvegarde ça dans sessionStorage car ses données expirent à la fin de la session */
   /* Pas besoin de système de version: JSONBin.io génère des URL à chaque édition, il faut juste que je les change dans le site à chaque fois */
@@ -69,6 +75,13 @@ i18n.updateDOM = function updateDOM() {
   console.log('>> Updating DOM');
   document.body.innerHTML = i18n.render(document.body.innerHTML, i18n.lines);
   console.log('>> Updated DOM');
+}
+
+i18n.setLanguage = function(lang) {
+  console.log('>> Setting language to', lang);
+  localStorage.setItem('language', lang);
+  sessionStorage.clear();
+  document.location.reload().reload();
 }
 
 window.i18n = i18n;
