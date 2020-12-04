@@ -13,8 +13,8 @@ const i18n = {
    * A cause du Cross-origin resource sharing
   */
   refs: {
-    en: 'https://api.jsonbin.io/b/5fc9827a2946d2126ffdea2b',
-    fr: 'https://api.jsonbin.io/b/5fc982a3516f9d127027ca24'
+    en: 'https://api.jsonbin.io/b/5fcab655516f9d1270282d5e',
+    fr: 'https://api.jsonbin.io/b/5fcab67b516f9d1270282d65'
   },
   render: function (string, data) {
     let re = /{{([^}}]+)?}}/g, matches = string.matchAll(re);
