@@ -3,11 +3,6 @@
  src: url("fonts/Heebo-Regular.ttf") format("truetype")
 }
 
-@font-face {
- font-family: "HeeboBold";
- src: url("fonts/Heebo-Bold.ttf") format("truetype")
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -35,6 +30,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 25px;
 }
 
+/*
+* Chargement
+*/
 #loading {
   z-index: 1000;
   background: rgb(0, 0, 0, 0.5);
@@ -54,12 +52,17 @@ body::-webkit-scrollbar-thumb {
   animation: spin 2s linear infinite;
 }
 
+/*
+* Spin animation
+*/
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-
+/*
+* Bouton pour retourner en haut de la page
+*/
 #goToTop {
   font-size: xx-large;
 
@@ -84,11 +87,17 @@ body::-webkit-scrollbar-thumb {
   background-color: #feca57;
 }
 
+/*
+* Fade In Animation
+*/
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
+/*
+* BounceIn Animation
+*/
 @keyframes bounceInDown {
    0% {
       opacity: 0;
@@ -115,6 +124,9 @@ body::-webkit-scrollbar-thumb {
   animation-fill-mode: both;
 }
 
+/*
+* ZoomIn animation (avatars)
+*/
 .zoomIn {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -129,7 +141,9 @@ body::-webkit-scrollbar-thumb {
   display: none !important;
 }
 
-/* Formattage de texte */
+/*
+ * Formattage de texte
+ */
 .alinea {
   text-indent: 2em;
 }
@@ -139,51 +153,15 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Perpetua', sans-serif;
 }
 
-
-.icons {
-  user-select: none;
-  margin: 0 3em 0 3em;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.icons a {
-  color: #EAB543;
-  padding: 1em;
-  display: inline-block;
-}
-
-/* Buttons */
-.buttons {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.4em;
-
-
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.buttons > * {
-  flex: 1 0 auto;
-}
-
-/* Titles */
+/*
+ * h1, h2
+ */
 h1.title {
   font-size: 4rem;
 }
 
 h2.title {
   font-size: 3rem;
-}
-
-.light {
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
 }
 
 .title {
@@ -199,9 +177,46 @@ h2.title {
   color: #fff;
 }
 
-.title,
-.status {
-  text-align: center;
+.light {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+/*
+ * Réseaux sociaux
+ */
+.icons {
+  user-select: none;
+  margin: 0 3em 0 3em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icons a {
+  color: #EAB543;
+  padding: 1em;
+  display: inline-block;
+}
+
+/*
+ * Boutons
+ */
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.4em;
+
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.buttons > * {
+  flex: 1 0 auto;
 }
 
 /* Règles horizontales */
@@ -226,46 +241,6 @@ main {
 
 .max-vh {
   height: 100vh;
-}
-
-/* Cartes */
-.cards {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.card {
-  width: fit-content;
-
-  display: flex;
-  flex-flow: column;
-
-  padding: 2.5em;
-  margin: 0 5em 0 5em;
-
-  line-height: 1.4;
-  color: #333;
-
-  background: #fff;
-  box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
-}
-
-.card.sm {
-  width: 30%;
-}
-
-.card.md {
-  width: 50%;
-}
-
-.card > h1:not(.light) {
-  font-family: 'HeeboBold', sans-serif;
-  line-height: 0;
-}
-
-.card > h1.light {
-  line-height: 0.3;
 }
 
 a {
@@ -344,7 +319,9 @@ img#avatar.sm {
   margin-top: 2em;
 }
 
-/* Video background */
+/*
+ * Conteneur contenant un fond d'écran sous forme de vidéo
+*/
 .video-container {
   position: relative;
   background-color: #000;
@@ -353,6 +330,9 @@ img#avatar.sm {
   overflow: hidden;
 }
 
+/*
+ * Lecteur vidéo du conteneur
+*/
 .video-container > video {
   object-fit: fill;
   position: absolute;
@@ -367,8 +347,8 @@ img#avatar.sm {
 }
 
 .video-container > .container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Haut de page */
@@ -504,9 +484,10 @@ form.contact > button {
 
   color: black;
 
-  font-family: "HeeboBold", sans-serif;
-  font-size: 1em;
+  font-family: monospace, system-ui;
+  font-size: 1.3em;
   font-weight: 900;
+
   text-decoration: none;
   text-transform: uppercase;
 
@@ -551,11 +532,13 @@ footer > .child:last-child {
 }
 
 footer .title {
-  font-family: "HeeboBold", sans-serif;
+  font-family: "Heebo", sans-serif;
   font-size: larger;
 }
 
-/* Responsive fixes */
+/*
+ * Style pour appareils ayant une taille d'écran plus petite que 600 px
+ */
 @media (max-width: 600px) {
   .me {
     margin-top: 3em;
