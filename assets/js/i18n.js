@@ -6,7 +6,7 @@
 
 /* i18n pour internationalisation (18 représentant le nombre de caractères entre le i & le n)*/
 const i18n = {
-  lang: localStorage.getItem('language') || 'en',
+  lang: localStorage.getItem('language') || 'fr',
   baseUrl: window.location.href.substring(0, window.location.href.lastIndexOf('/')),
   /*
    * Les langues sont publiées sur un hosting de fichiers JSON public parce que Chrome ne veut pas me laisser lire un fichier JSON avec le protocole file://
