@@ -6,15 +6,15 @@
 
 /* i18n pour internationalisation (18 représentant le nombre de caractères entre le i & le n)*/
 const i18n = {
-  lang: localStorage.getItem('language') || 'en',
+  lang: localStorage.getItem('language') || navigator.language || 'en',
   baseUrl: window.location.href.substring(0, window.location.href.lastIndexOf('/')),
   /*
    * Les langues sont publiées sur un hosting de fichiers JSON public parce que Chrome ne veut pas me laisser lire un fichier JSON avec le protocole file://
    * A cause du Cross-origin resource sharing
   */
   refs: {
-    en: 'https://api.jsonbin.io/b/5fc8d3bb9abe4f6e7caf03ad/1',
-    fr: 'https://api.jsonbin.io/b/5fc8d408045eb86f1f8a8b46/1'
+    en: 'https://api.jsonbin.io/b/5fc9827a2946d2126ffdea2b',
+    fr: 'https://api.jsonbin.io/b/5fc982a3516f9d127027ca24'
   },
   render: function (string, data) {
     let re = /{{([^}}]+)?}}/g, matches = string.matchAll(re);
@@ -26,11 +26,6 @@ const i18n = {
       }
     }
 
-    while(false) {//match = re.exec(string)) {
-      console.dir(match);
-
-    }
-
     return string;
   }
 };
@@ -39,7 +34,9 @@ i18n.load = async function load() {
   let lines = sessionStorage.getItem('language-lines');
   if (lines) {
     i18n.lines = JSON.parse(lines);
-    return i18n;
+    if (i18n.lines.language == i18n.lang) return i18n;
+
+    console.log('>> Mauvais fichier de langue');
   }
 
   if (window.location.href.startsWith('file://'))
@@ -47,7 +44,7 @@ i18n.load = async function load() {
 
   let url = window.location.href.startsWith('file://') ? i18n.refs[i18n.lang] : i18n.baseUrl + '/assets/languages/' + i18n.lang + '.json';
 
-  console.log('Fetching language:', i18n.lang);
+  console.log('Récupération de la langue:', i18n.lang);
   console.log('>>', url);
 
   const r = await fetch(url, {
@@ -59,6 +56,7 @@ i18n.load = async function load() {
   });
 
   i18n.lines = await r.json();
+  console.dir(i18n.lines);
 
   /* On sauvegarde ça dans sessionStorage car ses données expirent à la fin de la session */
   /* Pas besoin de système de version: JSONBin.io génère des URL à chaque édition, il faut juste que je les change dans le site à chaque fois */
