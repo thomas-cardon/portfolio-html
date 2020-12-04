@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  color: black;
+  background-color: #fff;
+
+  overflow-x: hidden;
+}
+
+.container:first-of-type::before {
+  content: "";
+  position: absolute;
+  left: 13.5vh;
+  bottom: 13.5vh;
+  width: 15vh;
+  height: 15vh;
+  border-left: 20px solid #2d3436;
+  border-bottom: 20px solid #2d3436;
+}
+
+.container:first-of-type::after {
+  content: "";
+  position: absolute;
+  right: 13.5vh;
+  top: 13.5vh;
+  width: 15vh;
+  height: 15vh;
+  border-right: 20px solid #2d3436;
+  border-top: 20px solid #2d3436;
+}
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: none !important;
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #b71540;
+  border-radius: 25px;
+}
+
+/* Conteneur vidéo */
+.video-container > video {
+  display: none;
+}
+
+/* Conteneurs */
+main {
+  margin-top: 3em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Liens, .color-primary */
+a {
+  color: inherit;
+  text-decoration: none;
+
+  border-bottom: 2px solid;
+}
+
+a, .color-primary {
+  color: #9561e2;
+  border-color: #9561e2;
+  text-decoration: none;
+}
+
+.color-secondary {
+  color: #2ed573;
+  border-color: #2ed573;
+  text-decoration: none;
+}
+
+/* Profil */
+.me {
+  display: flex;
+  align-items: center;
+
+  user-select: none;
+}
+
+h1 {
+  width: 80%;
+}
+
+/* Titre */
+.title {
+  color: rgba(17,24,39);
+  font-weight: 900;
+  font-size: 3.5em;
+  letter-spacing: -.025em;
+  text-align: center;
+}
+
+/* Sous-titre */
+.subtitle {
+  font-size: 1.6em;
+  font-weight: 400;
+  color: rgb(54, 67, 73);
+}
+
+.description {
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+  background-color: #fafcfc;
+  padding: 1.5em;
+  margin: auto 5em auto;
+  color: inherit;
+  line-height: 24px;
+  text-align: justify;
+  word-spacing: 0.5rem;
+  font-family: Georgia, ui-serif, serif;
+}
+
+.description > section > h3 {
+  font-weight: 600;
+  font-size: 1.7em;
+  letter-spacing: 0.1em;
+  font-family: 'Inter';
+}
+
+.description > section > p {
+  margin-top: 2em;
+}
+
+/*
+ * Réseaux sociaux
+ */
+.icons {
+  user-select: none;
+  margin: 0 3em 0 3em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icons a {
+  color: #78e08f;
+  border-bottom: unset;
+
+  padding: 1em;
+  display: inline-block;
+}
+
+/*
+ * Boutons
+ */
+.buttons {
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.buttons > * {
+  padding: 1.5em;
+  flex: 1 0 auto;
+}
+
+/* Règles horizontales */
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin-top: 3em;
+  width: 6em;
+}
+
+/* Avatar */
+img#avatar {
+  border-radius: 50%;
+  margin-right: 3em;
+  width: 128px;
+  height: 128px;
+}
+
+img#avatar.sm {
+  width: 64px;
+  height: 64px;
+}
+
+/* Bas de page */
+footer {
+  position: relative;
+  min-height: 10em;
+
+  padding: 1.5em;
+  margin: 1.5em;
+
+  display: flex;
+  align-items: baseline;
+
+  font-family: Georgia, serif;
+}
+
+footer::before {
+  border-top: rgb(226, 232, 240) solid 1px;
+  content: "";
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer > .child {
+  margin: 1.5em;
+  height: 100%;
+  border-right: 1px #E2E8F0 grey;
+
+  flex-basis: 45%;
+}
+
+footer > .child-large {
+  flex-basis: unset;
+}
+
+footer > .child:last-child {
+  margin-right: 1.5em;
+  border-right: 0;
+}
+
+footer .title {
+  font-size: larger;
+}
+
+footer a {
+  border-bottom: unset;
+}
+
+.max-vh:first-of-type {
+  height: 100vh;
+}
+
+.max-vh:last-of-type {
+  height: auto;
+}
+
+/*
+ * Style pour appareils ayant une taille d'écran plus petite que 600 px
+ */
+@media (max-width: 600px) {
+  body::before {
+    left: 3.5vh;
+    bottom: 3.5vh;
+  }
+
+  body::after {
+    right: 3.5vh;
+    top: 3.5vh;
+  }
+
+  .me {
+    margin-top: 3em;
+    flex-direction: column;
+  }
+
+  .subtitle {
+    font-size: 1.3em;
+  }
+
+  .me:not(.sm) img#avatar {
+    margin-right: 0;
+    margin-top: 3.5em;
+  }
+
+  .description {
+    padding: 1.5em;
+    margin: 1.5em;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer > .child {
+    border: 0;
+  }
+
+  footer p {
+    font-size: 1.1em;
+  }
+}
