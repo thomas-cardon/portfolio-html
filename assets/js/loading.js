@@ -4,6 +4,9 @@ const LoadingQ = {
   showPage: () => {
     Array.from(document.querySelectorAll('.hide')).forEach(el => el.classList.remove('hide'));
     document.getElementById('loading').style.display = 'none';
+  },
+  hidePage: () => {
+    document.getElementById('loading').style.display = 'block';
   }
 }
 
