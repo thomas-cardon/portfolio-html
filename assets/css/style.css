@@ -570,6 +570,11 @@ footer .title {
     margin-right: 0;
   }
 
+  .description {
+    padding: 1.5em;
+    margin: 1.5em;
+  }
+
   .grid {
     margin-top: 3rem;
   }
