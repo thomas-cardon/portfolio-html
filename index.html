@@ -21,7 +21,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
 
   <!-- Feuille de styles -->
-  <link rel="stylesheet" href="./assets/css/style.css" data-ui-theme="1">
+  <link rel="stylesheet" href="./assets/css/util.css">
+  <link rel="stylesheet" href="./assets/css/style.css" id="theme">
 </head>
 <body>
   <div id="loading" class="container">
@@ -36,7 +37,7 @@
     </video>
     <div class="hide container max-vh animated bounceInDown">
       <div class="me">
-        <img id="avatar" alt="Photo" src="https://avatars2.githubusercontent.com/u/5779685?s=460&u=0b6149c35f5fe8b93e5e646626817420734d5376&v=4" class="zoomIn" />
+        <img id="avatar" alt="Photo" src="./assets/img/avatar2.webp" class="zoomIn" draggable="false" />
 
         <h1 class="title">
           Thomas <span class="color-primary">Cardon</span>
@@ -152,8 +153,8 @@
       <div class="child">
         <span class="title">{{footer.title.change-language}}</span>
         <ul id="languages">
-          <li><a href="" data-lang="fr" onclick="i18n.setLanguage('fr')">FR</a></li>
-          <li><a href="" data-lang="en" onclick="i18n.setLanguage('en')">EN</a></li>
+          <li><a href="" data-lang="fr" onclick="i18n.setLanguage('fr')">Français</a></li>
+          <li><a href="" data-lang="en" onclick="i18n.setLanguage('en')">English</a></li>
         </ul>
       </div>
       <p class="child-large">
