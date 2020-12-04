@@ -25,7 +25,6 @@
 
 .projets #stats {
   font-weight: bolder;
-  font-size: .5rem;
 }
 
 /*
@@ -126,9 +125,13 @@
   padding: 0;
 }
 
-@media screen and (max-device-width: 480px) {
+@media screen and (max-width: 480px) {
   .bio > * {
     margin: 0 !important;
+  }
+
+  #stats {
+    font-size: .5rem;
   }
 
   .projet {
