@@ -1,6 +1,7 @@
 .projets #profile {
-  width: 50%;
+  margin: 2em;
   display: flex;
+
   flex-direction: column;
   align-items: center;
 }
@@ -24,8 +25,12 @@
 
 .projets #stats {
   font-weight: bolder;
+  font-size: .5rem;
 }
 
+/*
+* Bio
+*/
 .bio {
   font-size: 1.2em;
   font-style: italic;
@@ -46,6 +51,7 @@
 
 .bio > span {
   float: right;
+  padding-top: 3em;
 }
 
 .projet {
@@ -74,9 +80,7 @@
   border: 2px solid transparent;
   border-radius: 5px;
 
-  max-width: 50%;
-  height: auto;
-
+  width: 30vw;
   transition: border-color 0.15s ease;
 
   flex: 1;
@@ -123,11 +127,24 @@
 }
 
 @media screen and (max-device-width: 480px) {
+  .bio > * {
+    margin: 0 !important;
+  }
+
   .projet {
     flex-direction: column;
+    margin: 1.5em;
+  }
+
+  .projet > section {
+    margin: 1em;
+  }
+
+  .projet h1 {
+    font-size: 2em;
   }
 
   .projet > img {
-    align-self: center;
+    display: none;
   }
 }
