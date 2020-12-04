@@ -3,7 +3,7 @@ const Theme = {
   * Permet un changement de thème forcé
   */
   changeCSS: function(cssFile) {
-      var oldlink = document.querySelector('[data-ui-theme]')
+      var oldlink = document.getElementById('theme');
       var newlink = document.createElement('link');
 
       newlink.setAttribute('rel', 'stylesheet');
@@ -16,15 +16,15 @@ const Theme = {
   },
   load: function() {
     const theme = localStorage.getItem('theme');
+    console.log('Loading theme:', theme);
 
     if(!theme) {
       localStorage.setItem('theme', 'light');
     }
     else {
-      console.log('Loading theme:', theme);
+      console.log('Loading theme:', './assets/css/theme-minimalist.css');
+      Theme.changeCSS('./assets/css/theme-minimalist.css');
     }
-
-
   }
 }
 
@@ -41,3 +41,5 @@ window.addEventListener('scroll', function() {
 });
 
 window.onbeforeunload = window.scroll(0, 0);
+
+LoadingQ.push(Theme.load);
