@@ -1,11 +1,16 @@
 const Theme = {
-  changeCSS: function(cssFile, cssLinkIndex) {
-      var oldlink = document.getElementsByTagName('link').item(cssLinkIndex);
+  /*
+  * Permet un changement de thème forcé
+  */
+  changeCSS: function(cssFile) {
+      var oldlink = document.querySelector('[data-ui-theme]')
       var newlink = document.createElement('link');
 
       newlink.setAttribute('rel', 'stylesheet');
       newlink.setAttribute('type', 'text/css');
       newlink.setAttribute('href', cssFile);
+
+      newlink.setAttribute('data-ui-theme', '1');
 
       document.getElementsByTagName('head').item(0).replaceChild(newlink, oldlink);
   },
