@@ -14,26 +14,40 @@ body {
   overflow-x: hidden;
 }
 
-.container:first-of-type::before {
-  content: "";
-  position: absolute;
-  left: 13.5vh;
-  bottom: 13.5vh;
-  width: 15vh;
-  height: 15vh;
-  border-left: 20px solid #2d3436;
-  border-bottom: 20px solid #2d3436;
-}
+@media (min-width: 1024px) {
+  .container:first-of-type::before {
+    content: "";
+    position: absolute;
+    left: 8.5vh;
+    bottom: 8.5vh;
+    width: 10vh;
+    height: 10vh;
+    border-left: 20px solid #2d3436;
+    border-bottom: 20px solid #2d3436;
 
-.container:first-of-type::after {
-  content: "";
-  position: absolute;
-  right: 13.5vh;
-  top: 13.5vh;
-  width: 15vh;
-  height: 15vh;
-  border-right: 20px solid #2d3436;
-  border-top: 20px solid #2d3436;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .container:first-of-type::after {
+    content: "";
+    position: absolute;
+    right: 8.5vh;
+    top: 8.5vh;
+    width: 10vh;
+    height: 10vh;
+    border-right: 20px solid #2d3436;
+    border-top: 20px solid #2d3436;
+
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .container:first-of-type:hover:before {
+    transform: scale(1.25, 1.25);
+  }
+
+  .container:first-of-type:hover:after {
+    transform: scale(1.25, 1.25);
+  }
 }
 
 /* Scrollbar */
