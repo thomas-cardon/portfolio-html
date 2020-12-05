@@ -30,7 +30,7 @@ const Theme = {
 
 /*
 * Vérifie si le navigateur dispose d'un écran tactile
-* Si ce n'est pas le cas, alors le bouton vers le haut se met à fonctionner
+* Si ce n'est pas le cas, alors le bouton de retour vers le haut s'affichera
 */
 window.addEventListener('scroll', function() {
   if (!document.getElementById('goToTop')) return console.warn("Vers le haut -> le bouton n'existe pas!");
