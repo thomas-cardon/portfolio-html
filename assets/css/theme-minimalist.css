@@ -69,7 +69,7 @@ main {
 }
 
 .grid {
-  width: 100%;
+  width: 65%;
 
   display: flex;
   align-items: center;
@@ -118,6 +118,10 @@ h1 {
   text-align: center;
 }
 
+.title.sm {
+  font-size: 2rem;
+}
+
 /* Sous-titre */
 .subtitle {
   font-size: 1.6em;
@@ -137,11 +141,13 @@ h1 {
   font-family: Georgia, ui-serif, serif;
 }
 
-.description > section > h3 {
+.description h3 {
   font-weight: 600;
   font-size: 1.7em;
-  letter-spacing: 0.1em;
   font-family: 'Inter';
+
+  text-align: start;
+  letter-spacing: 0.1em;
 }
 
 .description > section > p {
@@ -205,6 +211,141 @@ img#avatar.sm {
   height: 64px;
 }
 
+/* Haut de page */
+header {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  padding: 0 0.5rem;
+
+  display: flex; /*1*/
+  flex-direction : row; /*2*/
+  justify-content: center; /*3*/
+
+  transition: background-color 0.5s ease-in-out;
+
+  overflow: hidden;
+}
+
+header.sm {
+  justify-content: space-between;
+}
+
+header.sm > a {
+  border-bottom: unset;
+}
+
+header > nav {
+  float: right;
+}
+
+nav > .btn-highlight {
+  background-color: unset;
+}
+
+/* Navigation bar buttons */
+.btn-highlight {
+  background-color: rgba(0,0,0,.5);
+  display: inline-block;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.btn-highlight > a {
+  font-family: system-ui;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .15em;
+  display: inline-block;
+  position: relative;
+}
+
+.btn-highlight > a:not([disabled])::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: whitesmoke;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.btn-highlight > a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.btn-disabled {
+  cursor: not-allowed;
+  color: oldlace;
+}
+
+/* Formulaire de contact */
+form.contact {
+  padding: 1.5em;
+  word-spacing: 0.5rem;
+
+  color: black;
+  background-color: #ecf0f1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form.contact > input,textarea {
+  width: 100%;
+}
+
+form.contact > * {
+  float: left;
+}
+
+form.contact > .user-box input, textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+
+form.contact > button {
+  background: black;
+
+  border: none;
+  outline: none;
+
+  position: relative;
+  display: inline-block;
+
+  padding: 10px 20px;
+  margin-top: 40px;
+
+  color: white;
+
+  font-family: monospace, system-ui;
+  font-size: 1.3em;
+  font-weight: 900;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+form.contact > button:hover {
+  transform: scale(1.05, 1.05);
+}
+
 /* Bas de page */
 footer {
   position: relative;
@@ -255,40 +396,30 @@ footer a {
   border-bottom: unset;
 }
 
-.max-vh:first-of-type {
-  height: 100vh;
-}
-
-.max-vh:last-of-type {
-  height: auto;
-}
-
 /*
  * Style pour appareils ayant une taille d'écran plus petite que 600 px
  */
 @media (max-width: 600px) {
-  body::before {
-    left: 3.5vh;
-    bottom: 3.5vh;
-  }
-
-  body::after {
-    right: 3.5vh;
-    top: 3.5vh;
+  .container:first-of-type::before, .container:first-of-type::after {
+    display: none;
   }
 
   .me {
-    margin-top: 3em;
     flex-direction: column;
   }
 
   .subtitle {
-    font-size: 1.3em;
+    font-size: 1.2em;
+    margin: 0 0 2em;
+    text-align: center;
   }
 
   .me:not(.sm) img#avatar {
     margin-right: 0;
-    margin-top: 3.5em;
+  }
+
+  .buttons {
+    flex-direction: column;
   }
 
   .description {
