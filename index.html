@@ -35,93 +35,92 @@
     <video autoplay="" loop="" playsinline="" muted="" poster="https://thomascardon-old.now.sh/_next/static/public/assets/img/section-0-4533f5c3841cbcc056d49836b7e7c491.png.webp">
       <source src="./assets/videos/bg.webm" type="video/webm">
     </video>
+    <div class="hide container max-vh animated bounceInDown">
+      <div class="me">
+        <img id="avatar" alt="Photo" src="./assets/img/avatar.webp" class="zoomIn" draggable="false" />
 
-    <div class="n-container">
-      <main>
-        <section class="flex-vh">
-          <div class="me">
-            <img id="avatar" alt="Photo" src="./assets/img/avatar.webp" class="zoomIn" draggable="false" />
+        <h1 class="title">
+          Thomas <span class="color-primary">Cardon</span>
+        </h1>
+      </div>
 
-            <h1 class="title">
-              Thomas <span class="color-primary">Cardon</span>
-            </h1>
+      <p class="subtitle">
+        {{subtitle}}
+      </p>
+
+      <section class="icons">
+        <a href="https://github.com/Ryzzzen" target="_blank" alt="GitHub" class="zoomIn">
+          <i class="fab fa-github fa-3x">&nbsp;</i>
+        </a>
+
+        <a href="https://open.spotify.com/user/ogg2ip5no8t4uwrwzunaqnfjo?si=UeLuS7XDSGOHGhMQROXsig" alt="Spotify" target="_blank" class="zoomIn">
+          <i class="fab fa-spotify fa-3x">&nbsp;</i>
+        </a>
+
+        <a href="https://www.reddit.com/user/ryzzzen" target="_blank" alt="Reddit" class="zoomIn">
+          <i class="fab fa-reddit fa-3x">&nbsp;</i>
+        </a>
+
+        <a href="https://twitter.com/Ryzzzen" target="_blank" alt="Twitter" class="zoomIn">
+          <i class="fab fa-twitter fa-3x">&nbsp;</i>
+        </a>
+
+        <a href="http://instagram.com/thomas.cardonx" target="_blank" alt="Instagram" class="zoomIn">
+          <i class="fab fa-instagram fa-3x">&nbsp;</i>
+        </a>
+
+        <a href="https://discordapp.com/channels/@me/USERID/98840465624809472" target="_blank" alt="Discord" class="zoomIn">
+          <i class="fab fa-discord fa-3x">&nbsp;</i>
+        </a>
+
+        <a href="https://www.snapchat.com/add/phant0mpulse" target="_blank" alt="Snapchat" class="zoomIn">
+          <i class="fab fa-snapchat fa-3x">&nbsp;</i>
+        </a>
+
+        <a href="#" target="_blank" class="zoomIn">
+          <i class="fab fa-skype fa-3x">&nbsp;</i>
+        </a>
+
+        <a href="mailto:thomas.cardon@etu.univ-amu.fr" target="_blank" alt="Mail" class="zoomIn">
+          <i class="fas fa-envelope-open-text fa-3x">&nbsp;</i>
+        </a>
+
+      </section>
+    </div>
+
+    <div class="hide container max-vh">
+      <div class="grid">
+        <nav class="buttons">
+          <div class="btn-highlight bg-secondary">
+            <a href="https://github.com/Ryzzzen" target="_blank">
+              <i class="fab fa-github">&nbsp;</i>Github
+            </a>
           </div>
 
-          <p class="subtitle">
-            {{subtitle}}
-          </p>
-
-          <div class="icons">
-            <a href="https://github.com/Ryzzzen" target="_blank" alt="GitHub" class="zoomIn">
-              <i class="fab fa-github fa-3x">&nbsp;</i>
-            </a>
-
-            <a href="https://open.spotify.com/user/ogg2ip5no8t4uwrwzunaqnfjo?si=UeLuS7XDSGOHGhMQROXsig" alt="Spotify" target="_blank" class="zoomIn">
-              <i class="fab fa-spotify fa-3x">&nbsp;</i>
-            </a>
-
-            <a href="https://www.reddit.com/user/ryzzzen" target="_blank" alt="Reddit" class="zoomIn">
-              <i class="fab fa-reddit fa-3x">&nbsp;</i>
-            </a>
-
-            <a href="https://twitter.com/Ryzzzen" target="_blank" alt="Twitter" class="zoomIn">
-              <i class="fab fa-twitter fa-3x">&nbsp;</i>
-            </a>
-
-            <a href="http://instagram.com/thomas.cardonx" target="_blank" alt="Instagram" class="zoomIn">
-              <i class="fab fa-instagram fa-3x">&nbsp;</i>
-            </a>
-
-            <a href="https://discordapp.com/channels/@me/USERID/98840465624809472" target="_blank" alt="Discord" class="zoomIn">
-              <i class="fab fa-discord fa-3x">&nbsp;</i>
-            </a>
-
-            <a href="https://www.snapchat.com/add/phant0mpulse" target="_blank" alt="Snapchat" class="zoomIn">
-              <i class="fab fa-snapchat fa-3x">&nbsp;</i>
-            </a>
-
-            <a href="#" target="_blank" class="zoomIn">
-              <i class="fab fa-skype fa-3x">&nbsp;</i>
-            </a>
-
-            <a href="mailto:thomas.cardon@etu.univ-amu.fr" target="_blank" alt="Mail" class="zoomIn">
-              <i class="fas fa-envelope-open-text fa-3x">&nbsp;</i>
+          <div class="btn-highlight bg-secondary">
+            <a href="./projets.html">
+              <i class="far fa-folder-open">&nbsp;</i>{{menu-projects}}
             </a>
           </div>
 
-          <nav class="buttons">
-            <div class="btn-highlight bg-secondary">
-              <a href="https://github.com/Ryzzzen" target="_blank">
-                <i class="fab fa-github">&nbsp;</i>Github
-              </a>
-            </div>
+          <div class="btn-highlight bg-secondary">
+            <a href="./cv.html">
+              <i class="far fa-file-pdf">&nbsp;</i>CV
+            </a>
+          </div>
 
-            <div class="btn-highlight bg-secondary">
-              <a href="./projets.html">
-                <i class="far fa-folder-open">&nbsp;</i>{{menu-projects}}
-              </a>
-            </div>
+          <div class="btn-highlight bg-secondary">
+            <a href="./contact.html">
+              <i class="far fa-comments">&nbsp;</i>{{menu-contact}}
+            </a>
+          </div>
 
-            <div class="btn-highlight bg-secondary">
-              <a href="./cv.html">
-                <i class="far fa-file-pdf">&nbsp;</i>CV
-              </a>
-            </div>
-
-            <div class="btn-highlight bg-secondary">
-              <a href="./contact.html">
-                <i class="far fa-comments">&nbsp;</i>{{menu-contact}}
-              </a>
-            </div>
-
-            <div class="btn-highlight bg-secondary">
-              <a href="./bibliographie.html">
-                <i class="fas fa-link">&nbsp;</i>{{menu-sources}}
-              </a>
-            </div>
-          </nav>
-        </section>
-
+          <div class="btn-highlight bg-secondary">
+            <a href="./bibliographie.html">
+              <i class="fas fa-link">&nbsp;</i>{{menu-sources}}
+            </a>
+          </div>
+        </nav>
         <div class="description">
           <section id="about-me">
             <h3 class="color-secondary">{{about-me}}</h3>
@@ -134,46 +133,45 @@
             <p>{{description.see-projects}}&nbsp;<a href="./projets.html">{{here}}</a>.
           </section>
         </div>
-      </main>
-
-      <footer class="hide">
-        <address class="child">
-          <p class="title" style="text-align: left;">{{footer.title.mail}}</p>
-          <a href="mailto:thomas.cardon@etu.univ-amu.fr">thomas.cardon@etu.univ-amu.fr</a>
-        </address>
-        <address class="child">
-          <span class="title">{{footer.title.address}}</span>
-          <br>
-          <span>564 Avenue Gaston Berger</span>
-          <br>
-          <span>Appartement 354</span>
-          <br>
-          <span>13100 Aix-en-Provence</span>
-        </address>
-        <div class="child">
-          <span class="title">{{footer.title.change-language}}</span>
-          <ul id="languages">
-            <li><a href="" data-lang="fr" onclick="i18n.setLanguage('fr')">Français</a></li>
-            <li><a href="" data-lang="en" onclick="i18n.setLanguage('en')">English</a></li>
-          </ul>
-        </div>
-        <div class="child">
-          <span class="title">{{footer.title.change-theme}}</span>
-          <ul id="themes">
-            <li><a href="" data-theme="cybermood_2077" onclick="Theme.changeTheme('cybermood_2077', true)">cybermood_2077</a></li>
-            <li><a href="" data-theme="minimalist" onclick="Theme.changeTheme('minimalist', true)">Minimaliste</a></li>
-          </ul>
-        </div>
-        <p class="child-large">
-          <em>
-            {{footer.description.1}}
-            <a href="https://thomascardon-old.now.sh/" target="_blank">{{here}}</a>{{footer.description.2}}&nbsp;<a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">{{footer.description.3}}</a>.
-            © Thomas Cardon — 2020
-          </em>
-        </p>
-      </footer>
+      </div>
     </div>
 
+    <footer class="hide">
+      <address class="child">
+        <p class="title" style="text-align: left;">{{footer.title.mail}}</p>
+        <a href="mailto:thomas.cardon@etu.univ-amu.fr">thomas.cardon@etu.univ-amu.fr</a>
+      </address>
+      <address class="child">
+        <span class="title">{{footer.title.address}}</span>
+        <br>
+        <span>564 Avenue Gaston Berger</span>
+        <br>
+        <span>Appartement 354</span>
+        <br>
+        <span>13100 Aix-en-Provence</span>
+      </address>
+      <div class="child">
+        <span class="title">{{footer.title.change-language}}</span>
+        <ul id="languages">
+          <li><a href="" data-lang="fr" onclick="i18n.setLanguage('fr')">Français</a></li>
+          <li><a href="" data-lang="en" onclick="i18n.setLanguage('en')">English</a></li>
+        </ul>
+      </div>
+      <div class="child">
+        <span class="title">{{footer.title.change-theme}}</span>
+        <ul id="themes">
+          <li><a href="" data-theme="cybermood_2077" onclick="Theme.changeTheme('cybermood_2077', true)">cybermood_2077</a></li>
+          <li><a href="" data-theme="minimalist" onclick="Theme.changeTheme('minimalist', true)">Minimaliste</a></li>
+        </ul>
+      </div>
+      <p class="child-large">
+        <em>
+          {{footer.description.1}}
+          <a href="https://thomascardon-old.now.sh/" target="_blank">{{here}}</a>{{footer.description.2}}&nbsp;<a href="http://mickael-martin-nevot.com/univ-amu/iut/dut-informatique/conception-de-documents-et-d-interfaces-numeriques/s18-projet.pdf" target="_blank">{{footer.description.3}}</a>.
+          © Thomas Cardon — 2020
+        </em>
+      </p>
+    </footer>
   </div>
 
   <script src="./assets/js/loading.js"></script>

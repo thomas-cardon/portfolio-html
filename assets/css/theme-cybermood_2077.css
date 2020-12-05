@@ -232,9 +232,9 @@ header {
   width: 100%;
   padding: 0 0.5rem;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: flex; /*1*/
+  flex-direction : row; /*2*/
+  justify-content: center; /*3*/
 
   transition: background-color 0.5s ease-in-out;
 
@@ -256,6 +256,17 @@ nav > .btn-highlight {
 nav.buttons {
   background-color: rgba(0,0,0,.5);
   padding: 1em;
+}
+
+@media(max-width: 450px) {
+  header, nav {
+    flex-flow: column wrap;
+  }
+
+  nav > .btn-highlight {
+    text-align: left;
+    width: 100%;
+  }
 }
 
 /* Navigation bar buttons */
@@ -405,17 +416,6 @@ footer .title {
 /*
  * Style pour appareils ayant une taille d'écran plus petite que 600 px
  */
- @media(max-width: 450px) {
-   header, nav {
-     flex-flow: column wrap;
-   }
-
-   nav > .btn-highlight {
-     text-align: left;
-     width: 100%;
-   }
- }
-
 @media (max-width: 600px) {
   .me {
     margin-top: 3em;
@@ -549,7 +549,7 @@ footer .title {
 .projet h1 {
   color: #FFEC48;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 3em;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
@@ -559,7 +559,7 @@ footer .title {
 .projet h2 {
   color: #ecf0f1;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
