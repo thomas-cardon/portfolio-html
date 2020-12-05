@@ -209,6 +209,8 @@ hr {
 
 /* Avatar */
 img#avatar {
+  border: 5px solid #eee;
+
   border-radius: 50%;
   margin-right: 3em;
   width: 128px;
@@ -474,7 +476,7 @@ footer a {
   transform: scale(1.2, 1.2);
 }
 
-.projets .title {
+.projets h2 {
   font-size: 2.5em;
 }
 
@@ -509,18 +511,20 @@ footer a {
 }
 
 .projet {
-  width: 85vw;
+  width: 65vw;
   margin: 0 1.5em 1.5em 1.5em;
 
-  background-color: rgba(0,0,0,.5);
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+  border-radius: .5rem;
 
-  color: whitesmoke;
   letter-spacing: 0.04em;
   font-size: 1.2em;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  background-color: #2ed573;
 }
 
 .projet > section {
@@ -528,46 +532,44 @@ footer a {
   margin: 0 3em;
 }
 
-.projet > img {
+.projet img {
   user-select: none;
 
   border: 2px solid transparent;
   border-radius: 5px;
 
   width: 30vw;
+  height: auto;
+
   transition: border-color 0.15s ease;
 
   flex: 1;
 }
 
-.projet > img:hover,
-.projet > img:focus,
-.projet > img:active {
-  border-color: whitesmoke;
-  box-shadow: 10px 10px 59px 16px rgba(0,0,0,0.75);
+.projet > div {
+  background-color: #82e6ab;
+}
+
+.projet h1, h2 {
+  color: #FFEC48;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
 }
 
 .projet h1 {
-  color: #FFEC48;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 3em;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-align: center;
+  font-size: 3rem;
 }
 
 .projet h2 {
-  color: #ecf0f1;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-align: center;
+  display: none;
+  font-size: 2rem;
 }
 
 .projet ul {
+  display: none;
+
   list-style-type: "💫";
   padding-left: 1em;
 
