@@ -12,8 +12,8 @@ const i18n = {
    * Les langues sont publiées sur un hosting de fichiers JSON public
   */
   refs: {
-    en: 'https://api.jsonbin.io/b/5fcab655516f9d1270282d5e',
-    fr: 'https://api.jsonbin.io/b/5fcab67b516f9d1270282d65'
+    en: 'https://api.jsonbin.io/b/5fcc001965c249127ba3a866',
+    fr: 'https://api.jsonbin.io/b/5fcc00312946d2126ffea6d0'
   },
   render: function (string, data) {
     let re = /{{([^}}]+)?}}/g, matches = string.matchAll(re);
