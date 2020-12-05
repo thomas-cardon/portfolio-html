@@ -47,6 +47,8 @@ body::-webkit-scrollbar-thumb {
 
  /* Titre */
  .title {
+   flex-basis: 100%;
+
    font-size: 4vw;
 
    color: #fff;

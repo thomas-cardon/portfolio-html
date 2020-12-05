@@ -128,6 +128,8 @@ h1 {
 
 /* Titre */
 .title {
+  flex-basis: 100%;
+  
   user-select: none;
   text-align: center;
 
