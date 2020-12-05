@@ -17,6 +17,7 @@
   "footer.title.address": "Mon adresse",
   "footer.title.mail": "Adresse mail",
   "footer.title.change-language": "Langue",
+  "footer.title.change-theme": "Thème",
   "footer.description.1": "Ce site internet à été créé durant la fin de l'année 2020. Il utilise seulement HTML5, CSS3 et JavaScript. Je dispose d'une autre version de mon site ",
   "footer.description.2": ", qui utilisait d'autre technologies (NextJS, React), mais c'était pas le",
   "footer.description.3": "projet qu'on nous a demandé de faire.",
