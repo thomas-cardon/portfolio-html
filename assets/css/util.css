@@ -75,6 +75,14 @@
   height: 100vh;
 }
 
+.flex-vh {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /*
  * Style pour appareils ayant une taille d'écran plus petite que 600 px
  */
