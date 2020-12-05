@@ -47,7 +47,7 @@ body::-webkit-scrollbar-thumb {
 
  /* Titre */
  .title {
-   flex-basis: 100%;
+   flex-basis: auto;
 
    font-size: 4vw;
 
@@ -534,23 +534,10 @@ footer .title {
   margin: 0 3em;
 }
 
-.projet > img {
-  user-select: none;
-
-  border: 2px solid transparent;
-  border-radius: 5px;
-
-  width: 30vw;
-  transition: border-color 0.15s ease;
-
-  flex: 1;
-}
-
-.projet > img:hover,
-.projet > img:focus,
-.projet > img:active {
-  border-color: whitesmoke;
-  box-shadow: 10px 10px 59px 16px rgba(0,0,0,0.75);
+.projet .image {
+  width: 50%;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .projet h1 {
@@ -586,6 +573,15 @@ footer .title {
   padding: 0;
 }
 
+/*
+* Style pour les projets pour certains appareils
+*/
+@media screen and (max-width: 1024px) {
+  .projet .image {
+    background-size: contain !important;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .bio > * {
     margin: 0 !important;
@@ -608,7 +604,7 @@ footer .title {
     font-size: 2em;
   }
 
-  .projet > img {
+  .projet .image {
     display: none;
   }
 }
