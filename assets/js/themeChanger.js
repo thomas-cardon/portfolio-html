@@ -21,7 +21,7 @@ const Theme = {
     if(!theme) {
       localStorage.setItem('theme', 'cybermood_2077');
     }
-    else if (theme == minimalist) {
+    else if (theme == 'minimalist') {
       localStorage.setItem('theme', 'minimalist');
 
       console.log('Loading theme:', './assets/css/theme-minimalist.css');
