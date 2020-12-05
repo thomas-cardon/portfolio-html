@@ -33,26 +33,23 @@ body::-webkit-scrollbar-thumb {
 /*
  * h1, h2
  */
-h1.title {
-  font-size: 4rem;
-}
+ h1 {
+   width: 80%;
+ }
 
-h2.title {
-  font-size: 3rem;
-}
+ /* Titre */
+ .title {
+   font-size: 4vw;
 
-.title {
-  user-select: none;
+   color: #fff;
+   user-select: none;
+   line-height: 1.15;
+   text-align: center;
+ }
 
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #fff;
-}
-
-.title.sm {
-  font-size: 2rem;
-  color: #fff;
-}
+ .title.sm {
+   font-size: 2rem;
+ }
 
 /*
  * Réseaux sociaux

@@ -120,11 +120,13 @@ h1 {
 
 /* Titre */
 .title {
-  color: rgba(17,24,39);
-  font-weight: 900;
-  font-size: 3.5em;
-  letter-spacing: -.025em;
+  user-select: none;
   text-align: center;
+
+  color: rgba(17,24,39);
+  font-size: 4vw;
+  font-weight: 900;
+  letter-spacing: -.025em;
 }
 
 .title.sm {
