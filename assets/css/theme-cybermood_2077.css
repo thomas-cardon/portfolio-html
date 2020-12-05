@@ -396,6 +396,10 @@ footer > .child {
   flex-basis: 45%;
 }
 
+footer > .child > ul {
+  margin-left: -2em;
+}
+
 footer > .child-large {
   flex-basis: unset;
 }

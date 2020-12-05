@@ -3,30 +3,33 @@ const Theme = {
   * Permet un changement de thème forcé
   */
   changeCSS: function(cssFile) {
-      var oldlink = document.getElementById('theme');
-      var newlink = document.createElement('link');
+    let oldlink = document.getElementById('theme');
+    let newlink = document.createElement('link');
 
-      newlink.setAttribute('rel', 'stylesheet');
-      newlink.setAttribute('type', 'text/css');
-      newlink.setAttribute('href', cssFile);
+    newlink.setAttribute('rel', 'stylesheet');
+    newlink.setAttribute('type', 'text/css');
+    newlink.setAttribute('href', cssFile);
 
-      newlink.setAttribute('data-ui-theme', '1');
+    newlink.setAttribute('id', 'theme');
 
-      document.getElementsByTagName('head').item(0).replaceChild(newlink, oldlink);
+    document.getElementsByTagName('head').item(0).replaceChild(newlink, oldlink);
+  },
+  changeTheme: function(theme, save) {
+    if (save) localStorage.setItem('theme', theme);
+
+    console.log('Loading theme:', './assets/css/theme-' + theme + '.css');
+    Theme.changeCSS('./assets/css/theme-' + theme + '.css');
   },
   load: function() {
-    const theme = localStorage.getItem('theme');
+    const theme = localStorage.getItem('theme') || 'cybermood_2077';
     console.log('Loading theme:', theme);
 
-    if(!theme) {
-      localStorage.setItem('theme', 'cybermood_2077');
-    }
-    else if (theme == 'minimalist') {
-      localStorage.setItem('theme', 'minimalist');
+    const el = document.querySelector('a[data-theme="' + theme + '"]');
+    if (!el) console.warn("Ce thème n'est pas reconnu.");
+    else el.textContent += ' ✅';
 
-      console.log('Loading theme:', './assets/css/theme-minimalist.css');
-      Theme.changeCSS('./assets/css/theme-minimalist.css');
-    }
+    if (theme != 'cybermood_2077')
+    Theme.changeTheme(theme);
   }
 }
 
