@@ -448,3 +448,160 @@ footer .title {
     font-size: 1.1em;
   }
 }
+
+/*
+* Projets
+*/
+.projets #profile {
+  margin: 2em;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.projets #userAvatar {
+  user-select: none;
+
+  width: 196px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.projets #userAvatar:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.projets .title {
+  font-size: 2.5em;
+}
+
+.projets #stats {
+  font-weight: bolder;
+}
+
+/*
+* Bio
+*/
+.bio {
+  font-size: 1.2em;
+  font-style: italic;
+
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  border: 1px solid #FFEC48;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+
+  background-color: rgba(140, 140, 140, 0.10);
+}
+
+.bio > p {
+  float: left;
+}
+
+.bio > span {
+  float: right;
+  padding-top: 3em;
+}
+
+.projet {
+  width: 85vw;
+  margin: 0 1.5em 1.5em 1.5em;
+
+  background-color: rgba(0,0,0,.5);
+
+  color: whitesmoke;
+  letter-spacing: 0.04em;
+  font-size: 1.2em;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projet > section {
+  flex: 2;
+  margin: 0 3em;
+}
+
+.projet > img {
+  user-select: none;
+
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  width: 30vw;
+  transition: border-color 0.15s ease;
+
+  flex: 1;
+}
+
+.projet > img:hover,
+.projet > img:focus,
+.projet > img:active {
+  border-color: whitesmoke;
+  box-shadow: 10px 10px 59px 16px rgba(0,0,0,0.75);
+}
+
+.projet h1 {
+  color: #FFEC48;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+.projet h2 {
+  color: #ecf0f1;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+.projet ul {
+  list-style-type: "💫";
+  padding-left: 1em;
+
+  font-size: 0.7em;
+  font-family: 'Heebo', system-ui;
+}
+
+.projet li {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .bio > * {
+    margin: 0 !important;
+  }
+
+  #stats {
+    font-size: .5rem;
+  }
+
+  .projet {
+    flex-direction: column;
+    margin: 1.5em;
+  }
+
+  .projet > section {
+    margin: 1em;
+  }
+
+  .projet h1 {
+    font-size: 2em;
+  }
+
+  .projet > img {
+    display: none;
+  }
+}
