@@ -21,7 +21,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
 
   <!-- Feuille de styles -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/util.css">
+<link rel="stylesheet" href="./assets/css/style.css" id="theme">
 </head>
 <body>
   <div class="video-container">
@@ -38,7 +39,7 @@
     <header class="hide sm">
       <a href="./index.html">
         <div class="me">
-          <img id="avatar" class="sm zoomIn" alt="Photo" src="./assets/img/avatar.webp" />
+          <img id="avatar" class="sm zoomIn" alt="Photo" src="./assets/img/avatar2.webp" />
 
           <h1 class="title sm">
             Thomas <span class="color-primary">Cardon</span>
@@ -79,7 +80,7 @@
       </nav>
     </header>
 
-    <main class="hide container">
+    <div class="hide container max-vh">
       <h2 class="title">
         {{sources.header.1}}<span class="color-primary">{{sources.header.2}}</span>
       </h2>
@@ -97,9 +98,9 @@
           <li><a href="https://thomascardon-old.now.sh/" target="_blank">{{sources.link.9}}</a></li>
         </ul>
       </div>
-    </main>
+    </div>
 
-    <footer class="hide">
+    <footer>
       <address class="child">
         <p class="title" style="text-align: left;">{{footer.title.mail}}</p>
         <a href="mailto:thomas.cardon@etu.univ-amu.fr">thomas.cardon@etu.univ-amu.fr</a>
