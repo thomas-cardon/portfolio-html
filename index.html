@@ -22,7 +22,7 @@
 
   <!-- Feuille de styles -->
   <link rel="stylesheet" href="./assets/css/util.css">
-  <link rel="stylesheet" href="./assets/css/style.css" id="theme">
+  <link rel="stylesheet" href="./assets/css/theme-cybermood_2077.css" id="theme">
 </head>
 <body>
   <div id="loading" class="container">
@@ -37,7 +37,7 @@
     </video>
     <div class="hide container max-vh animated bounceInDown">
       <div class="me">
-        <img id="avatar" alt="Photo" src="./assets/img/avatar2.webp" class="zoomIn" draggable="false" />
+        <img id="avatar" alt="Photo" src="./assets/img/avatar.webp" class="zoomIn" draggable="false" />
 
         <h1 class="title">
           Thomas <span class="color-primary">Cardon</span>
@@ -155,6 +155,13 @@
         <ul id="languages">
           <li><a href="" data-lang="fr" onclick="i18n.setLanguage('fr')">Français</a></li>
           <li><a href="" data-lang="en" onclick="i18n.setLanguage('en')">English</a></li>
+        </ul>
+      </div>
+      <div class="child">
+        <span class="title">{{footer.title.change-theme}}</span>
+        <ul id="themes">
+          <li><a href="" data-theme="cybermood_2077" onclick="Theme.changeTheme('cybermood_2077', true)">cybermood_2077</a></li>
+          <li><a href="" data-theme="minimalist" onclick="Theme.changeTheme('minimalist', true)">Minimaliste</a></li>
         </ul>
       </div>
       <p class="child-large">
