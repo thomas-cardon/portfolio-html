@@ -7,11 +7,19 @@ body {
   padding: 0;
   margin: 0;
 
-  color: whitesmoke;
   background-color: #0B0C0A;
   font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
 
   overflow-x: hidden;
+
+  --color-primary: #ee5253;
+  --color-secondary: #52EEED;
+
+  --color-svg-1: #eab543;
+  --color-svg-2: black;
+
+  --color-text: whitesmoke;
+  color: var(--color-text);
 }
 
 /* Scrollbar */
@@ -28,14 +36,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #ff9f43;
 
   border-radius: 25px;
-}
-
-/* Icônes */
-.icon {
-  width: 48px;
-  height: 48px;
-  --color: #EAB543;
-  --color-secondary: black;
 }
 
 /*
@@ -72,7 +72,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .icons a {
-  color: #EAB543;
   padding: 1em;
   display: inline-block;
 }
@@ -132,13 +131,13 @@ a {
 }
 
 a, .color-primary {
-  color: #ee5253;
-  border-color: #ee5253;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
   text-decoration: none;
 }
 
 .color-secondary {
-  color: #52EEED;
+  color: var(--color-secondary);
   border-color: #1dd1a1;
   text-decoration: none;
 }
@@ -293,6 +292,14 @@ nav.buttons {
   letter-spacing: .15em;
   display: inline-block;
   position: relative;
+}
+
+.btn-highlight svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+
+  --color: white;
 }
 
 .btn-highlight > a:not([disabled])::after {
