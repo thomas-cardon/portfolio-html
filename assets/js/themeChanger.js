@@ -15,10 +15,13 @@ const Theme = {
     document.getElementsByTagName('head').item(0).replaceChild(newlink, oldlink);
   },
   changeTheme: function(theme, save) {
-    if (save) localStorage.setItem('theme', theme);
-
     console.log('Loading theme:', './assets/css/theme-' + theme + '.css');
-    Theme.changeCSS('./assets/css/theme-' + theme + '.css');
+
+    if (save) {
+      localStorage.setItem('theme', theme);
+      document.location.reload().reload();
+    }
+    else Theme.changeCSS('./assets/css/theme-' + theme + '.css');
   },
   load: function() {
     const theme = localStorage.getItem('theme') || 'cybermood_2077';
