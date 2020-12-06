@@ -7,7 +7,7 @@ body {
   padding: 0;
   margin: 0;
 
-  background-color: #0B0C0A;
+  background: linear-gradient(to bottom, #232526, #414345);
   font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
 
   overflow-x: hidden;
@@ -104,10 +104,6 @@ hr {
 }
 
 /* Conteneurs */
-main {
-  margin-top: 3em;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -154,7 +150,7 @@ a, .color-primary {
 img#avatar {
   border: 5px solid #fff;
   border-radius: 50%;
-  
+
   margin-right: 3em;
   width: 128px;
   height: 128px;
@@ -468,7 +464,7 @@ footer .title {
 /*
 * Projets
 */
-.projets #profile {
+section#profile {
   margin: 2em;
   display: flex;
 
@@ -476,7 +472,7 @@ footer .title {
   align-items: center;
 }
 
-.projets #userAvatar {
+section#profile > img {
   user-select: none;
 
   width: 196px;
@@ -485,15 +481,15 @@ footer .title {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.projets #userAvatar:hover {
+section#profile > img:hover {
   transform: scale(1.2, 1.2);
 }
 
-.projets .title {
+section .title {
   font-size: 2.5em;
 }
 
-.projets #stats {
+section#profile > #stats {
   font-weight: bolder;
 }
 
@@ -511,7 +507,7 @@ footer .title {
   border-left-width: .25rem;
   border-radius: .25rem;
 
-  background-color: rgba(140, 140, 140, 0.10);
+  background-color: rgba(140, 140, 140, 0.5);
 }
 
 .bio > p {
