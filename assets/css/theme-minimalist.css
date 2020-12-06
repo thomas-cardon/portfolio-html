@@ -148,6 +148,8 @@ h1 {
   font-size: 1.6em;
   font-weight: 400;
   color: rgb(54, 67, 73);
+
+  text-align: center;
 }
 
 .description {
@@ -428,12 +430,6 @@ footer a {
     flex-direction: column;
   }
 
-  .subtitle {
-    font-size: 1.2em;
-    margin: 0 0 2em;
-    text-align: center;
-  }
-
   .me:not(.sm) img#avatar {
     margin-right: 0;
   }
@@ -485,15 +481,10 @@ section .title {
   font-size: 2.5em;
 }
 
-section#stats {
-  font-weight: bolder;
-}
-
 /*
 * Bio
 */
 .bio {
-  font-size: 1.2em;
   font-style: italic;
 
   padding: 1.25rem;
@@ -595,6 +586,14 @@ section#stats {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .bio {
+    font-size: 1vw;
+  }
+
+  section#profile > #stats {
+    font-size: 1.4vw;
+  }
+
   .btn-highlight > a {
     font-size: 0;
   }
@@ -614,8 +613,9 @@ section#stats {
     margin: 0 !important;
   }
 
-  #stats {
-    font-size: .5rem;
+  .subtitle {
+    font-size: 1.2em;
+    margin: 0 0 2em;
   }
 
   .projet {
