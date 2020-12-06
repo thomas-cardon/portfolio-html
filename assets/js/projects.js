@@ -1,3 +1,4 @@
+/* variable globale pour réutiliser les données entre les deux fonctions */
 window.me = {};
 
 function loadProfile() {
