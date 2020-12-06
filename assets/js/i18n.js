@@ -3,17 +3,129 @@
 *   Inspiré de: https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line
 *   "Templating Engine in just 20 lines"
 */
-
-/* i18n pour internationalisation (18 représentant le nombre de caractères entre le i & le n)*/
 const i18n = {
   lang: localStorage.getItem('language') || 'fr',
-  baseUrl: window.location.href.substring(0, window.location.href.lastIndexOf('/')),
-  /*
-   * Les langues sont publiées sur un hosting de fichiers JSON public
-  */
   refs: {
-    en: 'https://api.jsonbin.io/b/5fcc001965c249127ba3a866',
-    fr: 'https://api.jsonbin.io/b/5fcc00312946d2126ffea6d0'
+    en: {
+      "language": "en",
+      "subtitle": "19 year-old student, currently at Aix-Marseille, IT dept.",
+      "here": "here",
+      "available": "available",
+      "follows": "Following",
+      "followers": "followers",
+      "people": "people",
+      "menu-projects": "Projects",
+      "menu-contact": "Contact",
+      "menu-sources": "Sources",
+      "about-me": "About me",
+      "about-me.section": "I've always been curious; I've explored a lot of different stuff knowing well what I was about to become later.\nThat's how I got myself a few hobbies: biking, running, art (thanks to Art History, and thanks to the teacher that made Art and French interesting!) I'm fond of TV shows, movies and musics (but I guess that's our generation, with such platforms like Netflix or Spotify that made this kind of stuff reachable.)",
+      "description": "... And IT in all of this?",
+      "description.section": "I've always been interested in this line of business. My curiosity and my ability to be self-taught are two qualities that have always enabled me to progress in this field. I have always done little things in my corner for my pleasure, and combining work and passion is the goal I have set for myself. As a kid, I spent my time watching YouTube videos and guides, visiting lost druid forums to understand how everything worked! I had started playing with the Java programming language in order to modify the Minecraft game. Time flies and then I started doing some projects in my corner, static and dynamic websites, with various programming languages ​​/ platforms although I have a preference for NodeJS. I've also done other cool things like home automation projects, electronics interest me a lot too. I am currently in the first year of a DUT in IT, promotion of 2020-2021.",
+      "description.see-projects": "You can take a look at the projects I've realized",
+      "footer.title.address": "My address",
+      "footer.title.mail": "Mail",
+      "footer.title.change-language": "Language",
+      "footer.title.change-theme": "Theme",
+      "footer.description.1": "This website has been created during the end of the year 2020. It uses only HTML5, CSS3, and JavaScript. I've got another version of my website ",
+      "footer.description.2": ", that used another technologies (NextJS, React), but it was irrelevant to the",
+      "footer.description.3": "project we've been asked to make",
+      "github.repo": "GitHub repo",
+      "github.repo.public": "public repos",
+      "github.contrib.unofficial.api": "Unofficial API Contribution",
+      "reddit.post": "Reddit Post",
+      "projects.header.1": "My pro",
+      "projects.header.2": "jects",
+      "projects.used.resources": "Used resources",
+      "projects.used.resources.pug": "Pug Render Engine",
+      "projects.used.resources.electron": "Cross-platform desktop apps framework using HTML/JS/CSS",
+      "projects.used.resources.nodejs": "Open source JavaScript environment running outside a web browser",
+      "projects.used.resources.nextjs": "An open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.",
+      "projects.1.desc": "I'm often playing with new players who doesn't have enough time to understand every aspect of the game, so this program handles those aspects automatically. By far my most popular project.",
+      "projects.2.desc": "A prototype that aggregates new mails and fetches Zoom/Google Meet links, and saves them in a database. The website, using NextJS+React shows those links and is linked to a Discord channel using webhooks.",
+      "projects.3.desc": "Reverse engineering of Pronote APIs to provide an interface more similar to the standards of recent years, plus an almost-instant loading and a few other interesting functionalities. Playground for HTTP/2, Progressive Web Apps, and Push Notifications",
+      "projects.4.desc": "Website that used to allow sync between user's players, so people could create a room, and watch a movie together, while being able to pause for everyone, etc. The website isn't open to public. Playground for NextJS, React, Material UI, and WebSocket.",
+      "cv.link.1": "You can access the file",
+      "cv.link.2": "if your browser doesn't show you the PDF here.",
+      "cv.updated": "Updated last summer",
+      "contact.form.1": "Contact",
+      "contact.form.2": "form",
+      "contact.form.label.mail": "Mail address",
+      "contact.form.label.message": "Message",
+      "contact.form.submit": "Submit",
+      "contact.form.open.client": "Open mail client",
+      "sources.header.1": "Sour",
+      "sources.header.2": "ces",
+      "sources.link.1": "The best website to keep notes I believe",
+      "sources.link.2": "Panda - a news tech/design/dev feed",
+      "sources.link.3": "Flat UI Colors 2",
+      "sources.link.4": "How to: CSS Loader (W3Schools)",
+      "sources.link.5": "Markup Validation Service",
+      "sources.link.6": "Graphic inspirations",
+      "sources.link.7": "Contact form",
+      "sources.link.8": "Templating Engine (inspired from this to created i18n script)",
+      "sources.link.9": "The website I had created for my Parcoursup project",
+      "sources.link.10": "danistefanovic/build-your-own-x → build your own (insert technology here): learn something by creating it"
+    },
+    fr: {
+      "language": "fr",
+      "subtitle": "Etudiant de 19 ans à Aix-Marseille Université, département informatique",
+      "here": "ici",
+      "available": "disponible",
+      "follows": "suit",
+      "followers": "me suivent",
+      "people": "personnes",
+      "menu-projects": "Projets",
+      "menu-contact": "Contact",
+      "menu-sources": "Bibliographie",
+      "about-me": "A propos de moi",
+      "about-me.section": "Ayant toujours été curieux, j'ai exploré plein de choses différentes tout en sachant déjà ce que j'allais faire plus tard. Ainsi j'ai plein de hobbies: vélo, course, art (merci à la matière Histoire des Arts, et merci à la professeure qui m'a redonné goût à la langue de Molière et à l'art!)... Je suis friand de séries télévisées, de films et de musiques (de nos jours, grâce aux plateformes à disposition c'est devenu très accessible; il suffit juste d'être curieux!)",
+      "description": "...Et l'informatique dans tout ça?",
+      "description.section": "Ce secteur m'a toujours intéressé! Ma curiosité et ma capacité à être autodidacte sont deux qualités qui m'ont toujours permis d'avancer dans ce domaine. J'ai toujours fait des petits trucs dans mon coin pour mon plaisir, et allier travail et passion est l'objectif que je me suis fixé. Plus petit, je passais mon temps à regarder avec des vidéos YouTube et des guides, à visiter des forums de druides perdus pour comprendre et apprendre! J'avais commencé à jouer avec le langage de programmation Java afin de modifier le jeu Minecraft. Le temps passe et j'ai ensuite commencé à faire des projets dans mon coin, des sites web statiques et dynamiques, avec de divers langages de programmation/plateformes même si j'ai une préférence pour NodeJS. J'ai fait aussi d'autres choses sympa comme des projets de domotique, l'électronique m'intéressant beaucoup aussi. Je suis actuellement en première année de DUT informatique, promotion de 2020-2021.",
+      "description.see-projects": "Vous pouvez voir les projets que j'ai réalisé",
+      "footer.title.address": "Mon adresse",
+      "footer.title.mail": "Adresse mail",
+      "footer.title.change-language": "Langue",
+      "footer.title.change-theme": "Thème",
+      "footer.description.1": "Ce site internet à été créé durant la fin de l'année 2020. Il utilise seulement HTML5, CSS3 et JavaScript. Je dispose d'une autre version de mon site ",
+      "footer.description.2": ", qui utilisait d'autre technologies (NextJS, React), mais c'était pas le",
+      "footer.description.3": "projet qu'on nous a demandé de faire",
+      "github.repo": "Répertoire GitHub",
+      "github.repo.public": "répertoires publics",
+      "github.contrib.unofficial.api": "Contribution à l'API non officielle",
+      "reddit.post": "Post Reddit",
+      "projects.header.1": "Mes pro",
+      "projects.header.2": "jets",
+      "projects.used.resources": "Resources utilisées",
+      "projects.used.resources.pug": "Moteur de rendu Pug",
+      "projects.used.resources.electron": "Framework pour applications de bureau multiplateformes",
+      "projects.used.resources.nodejs": "Environnement bas niveau permettant l’exécution de JavaScript côté serveur",
+      "projects.used.resources.nextjs": "NextJS permet un rendu côté serveur afin de générer des versions statiques et/ou dynamiques d'applications React, mais aussi d'héberger vos sites depuis un répertoire GitHub avec déploiement automatique.",
+      "projects.1.desc": "Un assistant pour aider les nouveaux joueurs à apprendre League of Legends. De loin mon projet le plus populaire. Ce projet n'est plus maintenu par manque de temps.",
+      "projects.2.desc": "Un prototype me permettant de récupérer chaque mail de mon adresse mail universitaire et de les analyser afin de récupérer les liens et identifiants de réunions, et les affiche",
+      "projects.3.desc": "Rétro-ingénierie des API Pronote afin de fournir une interface plus ressemblante aux standards de ces dernières années, avec un chargement presque instantané plus quelques fonctionnalités intéressantes. C'était mon terrain de jeu pour HTTP/2, les progressive web apps et les notification push",
+      "projects.4.desc": "Site web qui permettait la synchronisation des lecteurs vidéos avec tous ceux qui étaient connectés dans une même salle. Le site est encore disponible mais n'est pas ouvert au public. Terrain de jeu pour NextJS, React, Material UI, et WebSocket.",
+      "cv.link.1": "Vous pouvez accéder au fichier",
+      "cv.link.2": "si votre navigateur ne peut l'afficher.",
+      "cv.updated": "Mis-à-jour l'été dernier",
+      "contact.form.1": "Formulaire de",
+      "contact.form.2": "Contact",
+      "contact.form.label.mail": "Adresse mail",
+      "contact.form.label.message": "Message",
+      "contact.form.submit": "Envoyer",
+      "contact.form.open.client": "Ouvrir le client de messagerie",
+      "sources.header.1": "Biblio",
+      "sources.header.2": "graphie",
+      "sources.link.1": "Le meilleur site à mes yeux pour tenir ses notes",
+      "sources.link.2": "Panda - un feed de news tech/design/dev",
+      "sources.link.3": "Flat UI Colors 2",
+      "sources.link.4": "How to: CSS Loader (W3Schools)",
+      "sources.link.5": "Markup Validation Service",
+      "sources.link.6": "Inspirations grapiques",
+      "sources.link.7": "Formulaires de contact",
+      "sources.link.8": "Templating Engine (dont je me suis inspiré pour mon script i18n)",
+      "sources.link.9": "Le site que j'avais créé pour mon projet Parcoursup",
+      "sources.link.10": "danistefanovic/build-your-own-x → apprenez à utiliser un système en le recréant"
+    }
   },
   render: function (string, data) {
     let re = /{{([^}}]+)?}}/g, matches = string.matchAll(re);
@@ -37,35 +149,7 @@ i18n.load = async function load() {
   }
   else el.textContent += ' ✅';
 
-  let lines = sessionStorage.getItem('language-lines');
-  if (lines) {
-    i18n.lines = JSON.parse(lines);
-    if (i18n.lines.language == i18n.lang) return i18n;
-
-    console.log('>> Mauvais fichier de langue');
-  }
-
-  if (window.location.href.startsWith('file://'))
-  console.warn("Impossible de récupérer le fichier HTML localement (règles CORS) -> récupération depuis JSONBin.io (pastebin pour fichiers JSON)");
-
-  let url = window.location.href.startsWith('file://') ? i18n.refs[i18n.lang] : i18n.baseUrl + '/assets/languages/' + i18n.lang + '.json';
-
-  console.log('Récupération de la langue:', i18n.lang);
-  console.log('>>', url);
-
-  const r = await fetch(url, {
-    method: 'get',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  });
-
-  i18n.lines = await r.json();
-
-  /* On sauvegarde ça dans sessionStorage car ses données expirent à la fin de la session */
-  /* Pas besoin de système de version: JSONBin.io génère des URL à chaque édition, il faut juste que je les change dans le site à chaque fois */
-  sessionStorage.setItem('language-lines', JSON.stringify(i18n.lines));
+  i18n.lines = await i18n.refs[i18n.lang];
   return i18n;
 };
 
@@ -79,7 +163,6 @@ i18n.updateDOM = function updateDOM() {
 i18n.setLanguage = function(lang) {
   console.log('>> Setting language to', lang);
   localStorage.setItem('language', lang);
-  sessionStorage.clear();
   document.location.reload().reload();
 }
 
