@@ -10,7 +10,7 @@ function loadProfile() {
 
     document.getElementById('userAvatar').src = me.avatar_url;
     document.getElementById('text').innerText = `"${me.bio}"`;
-    document.getElementById('stats').innerHTML = `${me.followers} {{followers}} <i class="fas fa-user-friends"></i> <span class="color-primary">— {{follows}} ${me.following} {{people}} <i class="fas fa-users"></i> —</span> ${me.public_repos} {{github.repo.public}} <i class="fas fa-code-branch"></i>`;
+    document.getElementById('stats').innerHTML = `${me.followers} {{followers}} <span class="color-primary">— {{follows}} ${me.following} {{people}} —</span> ${me.public_repos} {{github.repo.public}}`;
   });
 };
 
