@@ -17,15 +17,22 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
 
   <!-- Feuille de styles -->
-  <link rel="stylesheet" href="./assets/css/util.css">
-  <link rel="stylesheet" href="./assets/css/theme-cybermood_2077.css" id="theme">
+  <link rel="preload" href="./assets/css/util.css" as="style" onload="this.rel = 'stylesheet'">
+  <!-- .hide était dans util.css; sauf que le temps que le fichier .css charge y'a une légère demi-seconde
+  où on voit les éléments (parce que forcément tant que util.css est pas chargé, la classe .hide n'est pas définie) -->
+  <style>.hide { display: none !important; }</style>
+
+  <!-- Scripts -->
+  <link rel="preload" as="script" href="./assets/js/loading.js">
+  <link rel="preload" as="script" href="./assets/js/i18n.js">
+  <link rel="preload" as="script" href="./assets/js/themeChanger.js">
 </head>
 <body>
   <div id="loading" class="container">
     <div class="animated bounceInDown"></div>
   </div>
 
-  <button id="goToTop" title="Go to top" onclick="window.scroll(0, 0)">⬆️</button>
+  <button id="goToTop" class="hide" title="Go to top" onclick="window.scroll(0, 0)">⬆️</button>
 
   <div class="video-container">
     <video autoplay="" loop="" playsinline="" muted="" poster="https://thomascardon-old.now.sh/_next/static/public/assets/img/section-0-4533f5c3841cbcc056d49836b7e7c491.png.webp">
@@ -44,7 +51,7 @@
         {{subtitle}}
       </p>
 
-      <section class="icons">
+      <section class="hide icons">
         <a href="https://github.com/Ryzzzen" target="_blank" alt="GitHub" class="zoomIn icon">
           <svg width="48" height="48" viewBox="0 0 256 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
               <g>
@@ -109,7 +116,6 @@
             <path style="fill: var(--color-svg-1);" fill-rule="evenodd" clip-rule="evenodd" d="M28.2108 23.9602C28.2108 26.2757 26.3217 28.1595 23.9998 28.1595C21.6777 28.1595 19.7887 26.2757 19.7887 23.9602C19.7887 21.6448 21.6777 19.7611 23.9998 19.7611C26.3217 19.7611 28.2108 21.6448 28.2108 23.9602Z" />
           </svg>
         </a>
-
       </section>
     </div>
 

@@ -1,3 +1,8 @@
+body {
+  background: #222222;
+  overflow: hidden;
+}
+
 /*
 * BounceIn Animation
 */
@@ -37,11 +42,6 @@
 .zoomIn:hover {
   transform: scale(1.1, 1.1);
   color: #fff;
-}
-
-/* Cette classe sert pour me faciliter la vie avec l'ajout du chargement */
-.hide {
-  display: none !important;
 }
 
 /*
