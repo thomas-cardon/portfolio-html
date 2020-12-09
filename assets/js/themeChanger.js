@@ -3,25 +3,29 @@ const Theme = {
   * Permet un changement de thème forcé
   */
   changeCSS: function(cssFile) {
-    let oldlink = document.getElementById('theme');
-    let newlink = document.createElement('link');
+    return new Promise((resolve, reject) => {
+      let newlink = document.createElement('link');
 
-    newlink.setAttribute('rel', 'stylesheet');
-    newlink.setAttribute('type', 'text/css');
-    newlink.setAttribute('href', cssFile);
+      newlink.setAttribute('rel', 'stylesheet');
+      newlink.setAttribute('type', 'text/css');
+      newlink.setAttribute('href', cssFile);
 
-    newlink.setAttribute('id', 'theme');
+      newlink.setAttribute('id', 'theme');
 
-    document.getElementsByTagName('head').item(0).replaceChild(newlink, oldlink);
+      newlink.onload = () => resolve();
+      newlink.onerror = error => reject(error);
+
+      document.getElementsByTagName('head').item(0).appendChild(newlink);
+    });
   },
   changeTheme: function(theme, save) {
     console.log('Loading theme:', './assets/css/theme-' + theme + '.css');
 
     if (save) {
       localStorage.setItem('theme', theme);
-      document.location.reload().reload();
+      document.location.reload();
     }
-    else Theme.changeCSS('./assets/css/theme-' + theme + '.css');
+    else return Theme.changeCSS('./assets/css/theme-' + theme + '.css');
   },
   load: function() {
     const theme = localStorage.getItem('theme') || 'cybermood_2077';
@@ -31,8 +35,7 @@ const Theme = {
     if (!el) console.warn("Ce thème n'est pas reconnu.");
     else el.textContent += ' ✅';
 
-    if (theme != 'cybermood_2077')
-    Theme.changeTheme(theme);
+    return Theme.changeTheme(theme);
   }
 }
 
@@ -48,6 +51,6 @@ window.addEventListener('scroll', function() {
   else document.getElementById('goToTop').style.opacity = 0;
 });
 
-window.onbeforeunload = window.scroll(0, 0);
+window.onbeforeunload = () => window.scroll(0, 0);
 
 LoadingQ.push(Theme.load);
