@@ -3,6 +3,17 @@
  src: url("fonts/Heebo-Regular.ttf") format("truetype")
 }
 
+:root {
+  --color-primary: #ee5253;
+  --color-secondary: #eab543;
+
+  --color-svg-1: #eab543;
+  --color-svg-2: black;
+
+  --color-text: whitesmoke;
+  color: var(--color-text);
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -11,15 +22,6 @@ body {
   font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
 
   overflow-x: hidden;
-
-  --color-primary: #ee5253;
-  --color-secondary: #52EEED;
-
-  --color-svg-1: #eab543;
-  --color-svg-2: black;
-
-  --color-text: whitesmoke;
-  color: var(--color-text);
 }
 
 /* Scrollbar */
@@ -98,7 +100,7 @@ body::-webkit-scrollbar-thumb {
 /* Règles horizontales */
 hr {
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-text);
   margin-top: 3em;
   width: 6em;
 }
@@ -186,11 +188,34 @@ img#avatar.sm {
   word-spacing: 0.5rem;
 }
 
-.description > section > h3 {
-  font-weight: lighter;
-  font-family: 'Heebo', system-ui;
-  font-size: 1.7em;
-  letter-spacing: 0.1em;
+.description > section > h1 {
+  font-size: xxx-large;
+}
+
+.description > section > h2 {
+  font-size: xx-large;
+}
+
+.description > section > h1, .description > section > h2 {
+  margin: 0;
+  padding: .5em;
+
+  line-height: 10vh;
+  color: var(--color-secondary);
+
+  font-family: system-ui;
+  font-weight: 700;
+
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.description > section > hr {
+  width: 100%;
+  display: block;
+  margin-top: .1em;
+  padding-top: 1em;
+  color: black;
 }
 
 .description > section > p {
@@ -452,7 +477,7 @@ footer .title {
 }
 
 /*
-* Projets
+* Projets & profil GitHub
 */
 section#profile {
   margin: 2em;
@@ -475,7 +500,7 @@ section#profile > img:hover {
   transform: scale(1.2, 1.2);
 }
 
-section .title {
+section#profile .title {
   font-size: 2.5em;
 }
 
@@ -529,13 +554,13 @@ section#profile > #stats {
   margin: 0 3em;
 }
 
-.projet .image {
+.projet > .image {
   width: 50%;
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
 
-.projet h1 {
+.projet > section > h1 {
   color: #FFEC48;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 3em;
@@ -545,7 +570,7 @@ section#profile > #stats {
   text-align: center;
 }
 
-.projet h2 {
+.projet > section > h2 {
   color: #ecf0f1;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 2em;
@@ -555,7 +580,7 @@ section#profile > #stats {
   text-align: center;
 }
 
-.projet ul {
+.projet > section > ul {
   list-style-type: "💫";
   padding-left: 1em;
 
@@ -618,11 +643,11 @@ section#profile > #stats {
     margin: 1em;
   }
 
-  .projet h1 {
+  .projet > h1 {
     font-size: 2em;
   }
 
-  .projet .image {
+  .projet > .image {
     display: none;
   }
 }
