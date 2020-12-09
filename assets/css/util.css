@@ -1,12 +1,4 @@
 /*
-* Fade In Animation
-*/
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-/*
 * BounceIn Animation
 */
 @keyframes bounceInDown {
@@ -115,7 +107,7 @@
   /* border: 8px solid #fff; */
   border-top: 8px solid #ffec48;
   border-radius: 50%;
-  
+
   animation: spin 2s linear infinite;
   overflow: hidden;
 }
@@ -135,7 +127,7 @@
   font-size: xx-large;
 
   z-index: 99;
-  display: none;
+  opacity: 0;
 
   position: fixed;
   bottom: 0.5em;
@@ -148,7 +140,8 @@
 
   background-color: #ff9f43;
   cursor: pointer;
-  animation: fadeIn 0.5s linear;
+
+  transition: opacity ease-in-out 0.3s;
 }
 
 #goToTop:hover {

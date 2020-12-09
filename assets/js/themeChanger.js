@@ -41,11 +41,11 @@ const Theme = {
 * Si ce n'est pas le cas, alors le bouton de retour vers le haut s'affichera
 */
 window.addEventListener('scroll', function() {
-  if (!document.getElementById('goToTop')) return console.warn("Vers le haut -> le bouton n'existe pas!");
+  if (!document.getElementById('goToTop')) return;
   if (window.matchMedia("(pointer:coarse)").matches) return;
 
-  if (window.scrollY > 400) document.getElementById('goToTop').style.display = 'block';
-  else document.getElementById('goToTop').style.display = 'none';
+  if (window.scrollY > 400) document.getElementById('goToTop').style.opacity = 1;
+  else document.getElementById('goToTop').style.opacity = 0;
 });
 
 window.onbeforeunload = window.scroll(0, 0);
