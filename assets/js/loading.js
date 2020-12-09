@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   for (a of LoadingQ._array) {
     console.log('LoadingQ >> Loading:', a[0].name),
-    await a[0].call(a[1] /* thisArg */, ...a[2] /* args */)
+    await a[0].call(a[1] /* thisArg */, ...a[2] /* args */);
   }
 
   delete LoadingQ._array;
