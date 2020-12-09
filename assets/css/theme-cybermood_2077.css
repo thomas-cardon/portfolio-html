@@ -21,7 +21,8 @@ body {
   background: linear-gradient(to bottom, #232526, #414345);
   font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
 
-  overflow-x: hidden;
+  background: #fff;
+  overflow: hidden visible;
 }
 
 /* Scrollbar */

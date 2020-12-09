@@ -8,14 +8,13 @@ body {
   padding: 0;
   margin: 0;
 
-  background-color: #fff;
-
-  overflow-x: hidden;
+  background: #fff;
+  overflow: hidden visible;
 
   --color-primary: #9561e2;
   --color-secondary: #2ed573;
 
-  --color-svg-1: #78e08f;
+  --color-svg-1: #ff7675;
   --color-svg-2: white;
 
   --color-text: #6B7280;
