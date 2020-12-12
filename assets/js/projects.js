@@ -1,5 +1,7 @@
+/* Copyright (c) 2020 Thomas Cardon */
+
 /* variable globale pour réutiliser les données entre les deux fonctions */
-window.me = {};
+var me = {};
 
 function loadProfile() {
   return new Promise((resolve, reject) => {
