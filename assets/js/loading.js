@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await i18n.load();
 
   for (a of LoadingQ._array) {
-    console.log('LoadingQ >> Loading:', a[0].name),
+    console.log('[LoadingQ] >> Chargement:', a[0].name),
     await a[0].call(a[1] /* thisArg */, ...a[2] /* args */);
   }
 
@@ -29,6 +29,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   await i18n.updateDOM();
 
-  console.log('>> Showing Page');
+  console.log('[LoadingQ] >> Affichage de la page');
   LoadingQ.showPage();
 });

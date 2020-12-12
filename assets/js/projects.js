@@ -6,12 +6,13 @@ var me = {};
 function loadProfile() {
   return new Promise((resolve, reject) => {
     document.getElementById('userAvatar').onload = function() {
-      console.log('Avatar >> loaded');
+      console.log('[Projets] >> Avatar chargé. Affichage du bloc.');
       resolve();
     }
 
     document.getElementById('userAvatar').src = me.avatar_url;
-    document.getElementById('text').innerText = `"${me.bio}"`;
+    document.getElementById('text').innerText = me.bio;
+    document.getElementById('githubLink').href = me.html_url;
     document.getElementById('stats').innerHTML = `${me.followers} {{followers}} <span class="color-primary">— {{follows}} ${me.following} {{people}} —</span> ${me.public_repos} {{github.repo.public}}`;
   });
 };
@@ -27,24 +28,23 @@ LoadingQ.push(async () => {
   let data = sessionStorage.getItem('profile');
 
   try {
-    if (me) me = JSON.parse(data);
+    if (data) me = JSON.parse(data);
   }
   catch(error) {
     console.error(error);
   }
 
-  if (window.fetch) {
+  if (me == {} && window.fetch) {
     let res = await fetch('https://api.github.com/users/ryzzzen');
     me = await res.json();
 
-    console.log('>> Téléchargement du profil GitHub');
+    console.log('[Projets] >> Téléchargement du profil GitHub');
     console.dir(me)
 
     sessionStorage.setItem('profile', JSON.stringify(me));
   }
-  else {
-    console.log('>> Impossible de télécharger profil GitHub');
-  }
+  else if (me == {}) console.log('[Projets] >> Impossible de télécharger profil GitHub');
+  else console.log('[Projets] >> Profil chargé depuis sessionStorage');
 });
 
 LoadingQ.push(loadProfile);

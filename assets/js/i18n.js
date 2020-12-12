@@ -140,7 +140,7 @@ const i18n = {
     for (const match of matches) {
       if (data[match[1]]) string = string.replace(match[0], data[match[1]]);
       else {
-        console.warn('i18n ->', match[1], ':', 'aucun remplacement trouvé');
+        console.warn('[i18n] >>', match[1], ':', 'aucun remplacement trouvé');
       }
     }
 
@@ -152,7 +152,7 @@ i18n.load = async function load() {
   const el = document.querySelector('a[data-lang="' + i18n.lang + '"]');
   if (!el) {
     i18n.lang = 'en';
-    console.warn("Cette langue n'est pas reconnue! Utilisation de la langue: en");
+    console.warn("[i18n] >> Cette langue n'est pas reconnue! Utilisation de la langue: en");
   }
   else el.textContent += ' ✅';
 
@@ -165,13 +165,13 @@ i18n.load = async function load() {
 * mais ça ne me laissait pas assez de liberté sans trop compliquer les choses à mon goût
 */
 i18n.updateDOM = function updateDOM() {
-  console.log('>> Updating DOM');
+  console.log('[i18n] >> Mise à jour DOM');
   document.body.innerHTML = i18n.render(document.body.innerHTML, i18n.lines);
-  console.log('>> Updated DOM');
+  console.log('[i18n] >> Mise à jour DOM terminée');
 }
 
 i18n.setLanguage = function(lang) {
-  console.log('>> Setting language to', lang);
+  console.log('[i18n] >> Langue définie:', lang);
   localStorage.setItem('language', lang);
   document.location.reload().reload();
 }

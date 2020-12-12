@@ -20,7 +20,7 @@ const Theme = {
   },
   /* Permet de changer de thème (parmi ceux présents dans le dossier css) */
   changeTheme: function(theme, save) {
-    console.log('Loading theme:', './assets/css/theme-' + theme + '.css');
+    console.log('[Thèmes] >> Chargement du fichier :', './assets/css/theme-' + theme + '.css');
 
     if (save) {
       localStorage.setItem('theme', theme);
@@ -31,10 +31,10 @@ const Theme = {
   /* Cette fonction s'assure du chargement du bon thème au chargement de la page */
   load: function() {
     const theme = localStorage.getItem('theme') || 'cybermood_2077';
-    console.log('Loading theme:', theme);
+    console.log('[Thèmes] >> Chargement :', theme);
 
     const el = document.querySelector('a[data-theme="' + theme + '"]');
-    if (!el) console.warn("Ce thème n'est pas reconnu.");
+    if (!el) console.warn("[Thèmes] >> Ce thème n'est pas reconnu.");
     else el.textContent += ' ✅';
 
     return Theme.changeTheme(theme);
