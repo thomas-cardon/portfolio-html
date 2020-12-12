@@ -1,3 +1,11 @@
+/* Copyright (c) 2020 Thomas Cardon
+*
+* Cette fonction me permet de charger les fonctions que je veux dans le bon ordre
+* et d'ensuite appeler les fonctions i18n
+* pour: -> traduire une fois que les scripts qui changent le DOM au lancement ont été exécutés
+*       -> enlever l'overlay de chargement avec le spinner une fois que la page à finit de charger
+*/
+
 const LoadingQ = {
   _array: [],
   push: (f, self = undefined, ...args) => LoadingQ._array.push([f, self, args]),
@@ -5,18 +13,11 @@ const LoadingQ = {
     Array.from(document.querySelectorAll('.hide')).forEach(el => el.classList.remove('hide'));
     document.getElementById('loading').style.display = 'none';
   },
-  hidePage: () => {
-    document.getElementById('loading').style.display = 'block';
-  }
+  hidePage: () => document.getElementById('loading').style.display = 'block'
 }
 
-/*
-* Cette fonction me permet de charger les fonctions que je veux dans le bon ordre
-* et d'ensuite appeler les fonctions i18n
-* pour: -> traduire une fois que les scripts qui changent le DOM au lancement ont été exécutés
-*       -> enlever l'overlay de chargement avec le spinner une fois que la page à finit de charger
-*/
 document.addEventListener('DOMContentLoaded', async () => {
+  /* Je suppose qu'il n'y ait pas d'erreur mais j'aurais pu rediriger sur une page d'erreur si i18n ou quelque chose d'autre plantait. */
   await i18n.load();
 
   for (a of LoadingQ._array) {
