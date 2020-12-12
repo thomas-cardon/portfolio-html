@@ -18,10 +18,9 @@ body {
   padding: 0;
   margin: 0;
 
-  background: linear-gradient(to bottom, #232526, #414345);
+  background: linear-gradient(to bottom, #0D1117, #232526);
   font-family: "Segoe UI", Arial, "Helvetica Neue", sans-serif;
 
-  background: #fff;
   overflow: hidden visible;
 }
 
