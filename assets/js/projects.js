@@ -1,10 +1,12 @@
 /* Copyright (c) 2020 Thomas Cardon */
 
 /* variable globale pour réutiliser les données entre les deux fonctions */
-var me = {};
+var me;
 
 function loadProfile() {
   return new Promise((resolve, reject) => {
+    if (!me) return reject('Aucune données reçues');
+
     document.getElementById('userAvatar').onload = function() {
       console.log('[Projets] >> Avatar chargé. Affichage du bloc.');
       resolve();
@@ -25,16 +27,16 @@ function loadProfile() {
 *       -> économiser les ressources réseau
 */
 LoadingQ.push(async () => {
-  let data = sessionStorage.getItem('profile');
+  me = sessionStorage.getItem('profile');
 
   try {
-    if (data) me = JSON.parse(data);
+    if (me) me = JSON.parse(data);
   }
   catch(error) {
     console.error(error);
   }
 
-  if (me == {} && window.fetch) {
+  if (!me && window.fetch) {
     let res = await fetch('https://api.github.com/users/ryzzzen');
     me = await res.json();
 
@@ -43,7 +45,7 @@ LoadingQ.push(async () => {
 
     sessionStorage.setItem('profile', JSON.stringify(me));
   }
-  else if (me == {}) console.log('[Projets] >> Impossible de télécharger profil GitHub');
+  else if (!me) console.log('[Projets] >> Impossible de télécharger profil GitHub');
   else console.log('[Projets] >> Profil chargé depuis sessionStorage');
 });
 
