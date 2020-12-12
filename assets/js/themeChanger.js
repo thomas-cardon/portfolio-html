@@ -41,20 +41,20 @@ const Theme = {
   }
 }
 
-/*
-* Vérifie si le navigateur dispose d'un écran tactile
-* Si ce n'est pas le cas, alors le bouton de retour vers le haut pourra s'afficher si nécessaire
-*/
-window.addEventListener('scroll', function() {
-  if (!document.getElementById('goToTop')) return;
-  if (window.matchMedia("(pointer:coarse)").matches) return;
-
-  if (window.scrollY > 400) document.getElementById('goToTop').style.opacity = 1;
-  else document.getElementById('goToTop').style.opacity = 0;
-});
-
 /* On remonte la page tout en haut avant que la page recharge (avant, parce que sinon Safari ne le prend pas en compte)*/
 window.onbeforeunload = () => window.scroll(0, 0);
 
 /* On met le chargement du thème dans la liste des fonctions à charger */
 LoadingQ.push(Theme.load);
+
+/*
+* Vérifie si le navigateur dispose d'un écran tactile
+* Si ce n'est pas le cas, alors le bouton de retour vers le haut pourra s'afficher si nécessaire
+*/
+window.addEventListener('scroll', function() {
+  const goToTop = document.getElementById('goToTop');
+  if (!goToTop || window.matchMedia("(pointer:coarse)").matches) return;
+
+  if (window.scrollY > 400) goToTop.style.opacity = 1;
+  else goToTop.style.opacity = 0;
+});
