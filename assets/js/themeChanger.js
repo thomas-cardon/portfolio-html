@@ -30,7 +30,7 @@ const Theme = {
   },
   /* Cette fonction s'assure du chargement du bon thème au chargement de la page */
   load: function() {
-    const theme = localStorage.getItem('theme') || 'cybermood_2077';
+    const theme = localStorage.getItem('theme') || 'minimalist';
     console.log('[Thèmes] >> Chargement :', theme);
 
     const el = document.querySelector('a[data-theme="' + theme + '"]');
