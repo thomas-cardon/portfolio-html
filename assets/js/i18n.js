@@ -1,8 +1,15 @@
-/*
-*   2020 - Thomas Cardon
-*   Inspiré de: https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line
-*   "Templating Engine in just 20 lines"
-*/
+/* Copyright (c) 2020 Thomas Cardon
+ *
+ * Seul la méthode i18n#render à été inspirée par un article que j'ai vu ici:
+ * https://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line ("Templating Engine in just 20 lines")
+ * Le reste provient de moi seul.
+ */
+
+ /* J'étais parti au départ pour quelque chose de beaucoup trop compliqué pour ce qui était demandé;
+ * Comme montré à mon correcteur j'étais parti sur des fichiers stockés en ligne qui téléchargaient les locales en JSON et qui les stockaient dans sessionStorage
+ * Sauf qu'étant donné qu'on télécharge déjà ce script (i18n.js), et qu'on à que deux langues,
+ * je me suis dit qu'on pourrait juste laisser un objet de lignes françaises et anglaises.
+ */
 const i18n = {
   lang: localStorage.getItem('language') || 'fr',
   refs: {
@@ -153,8 +160,11 @@ i18n.load = async function load() {
   return i18n;
 };
 
+/*
+* J'étais parti sur une mise-à-jour simple en prenant les élémants ayant un certain attribut,
+* mais ça ne me laissait pas assez de liberté sans trop compliquer les choses à mon goût
+*/
 i18n.updateDOM = function updateDOM() {
-  // J'étais parti sur une mise-à-jour simple en prenant les élémants ayant un certain attribut, mais ça ne me laissait pas assez de liberté sans trop compliquer les choses à mon goût
   console.log('>> Updating DOM');
   document.body.innerHTML = i18n.render(document.body.innerHTML, i18n.lines);
   console.log('>> Updated DOM');
