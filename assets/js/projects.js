@@ -30,7 +30,7 @@ LoadingQ.push(async () => {
   me = sessionStorage.getItem('profile');
 
   try {
-    if (me) me = JSON.parse(data);
+    if (me) me = JSON.parse(me);
   }
   catch(error) {
     console.error(error);
