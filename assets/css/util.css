@@ -121,7 +121,7 @@ body {
 }
 
 /*
-* Bouton pour retourner en haut de la page
+* Bouton pour {{go-to-top}} de la page
 */
 #goToTop {
   font-size: xx-large;
