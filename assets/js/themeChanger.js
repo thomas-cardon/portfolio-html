@@ -42,10 +42,50 @@ const Theme = {
 }
 
 /* On remonte la page tout en haut avant que la page recharge (avant, parce que sinon Safari ne le prend pas en compte)*/
-window.onbeforeunload = () => window.scroll(0, 0);
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 /* On met le chargement du thème dans la liste des fonctions à charger */
 LoadingQ.push(Theme.load);
+
+let collapsed = false;
+let nav, navWidth;
+
+/* On rabat la barre de navigation en une colonne dès qu'on descend afin de la garder visible */
+window.addEventListener('scroll', function() {
+  if (!navWidth) {
+    nav = document.querySelector('header.sm > nav');
+    navWidth = nav && nav.getClientRects() ? nav.getClientRects()[0].width : null;
+  }
+
+  if (window.getComputedStyle(nav).position == 'relative') return;
+
+  if (!collapsed && window.scrollY > 50) {
+    nav.style.fontSize = '0';
+    nav.style.transition = '1.5s';
+    nav.style.transform = "translate(" + navWidth + "px, 0)";
+
+    setTimeout(() => window.requestAnimationFrame(() => {
+      nav.style.flexDirection = 'column';
+      nav.style.transform = 'unset';
+
+      collapsed = true;
+    }), 500);
+  }
+  else if (window.scrollY < 50 && collapsed) {
+    nav.style.fontSize = 'unset';
+    nav.style.transition = '1s';
+    nav.style.transform = "translate(" + navWidth + "px, 0)";
+
+    setTimeout(() => window.requestAnimationFrame(() => {
+      nav.style.flexDirection = 'row';
+      nav.style.transform = 'unset';
+
+      collapsed = false;
+    }), 500);
+  }
+});
 
 /*
 * Vérifie si le navigateur dispose d'un écran tactile

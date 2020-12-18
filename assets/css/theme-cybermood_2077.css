@@ -111,6 +111,8 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding-top: 1.5em;
 }
 
 .grid {
@@ -256,7 +258,7 @@ img#avatar.sm {
 
 /* Haut de page */
 header {
-  position: relative;
+  position: fixed;
   z-index: 5;
 
   width: 100%;
@@ -277,6 +279,9 @@ header.sm {
 
 header > nav {
   float: right;
+
+  display: flex;
+  flex-direction: row;
 }
 
 nav > .btn-highlight {
@@ -560,24 +565,24 @@ section#profile > #stats {
   background-repeat: no-repeat !important;
 }
 
+.projet > section > h1, .projet > section > h2 {
+  width: 100%;
+
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
 .projet > section > h1 {
   color: #FFEC48;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 3em;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-align: center;
+  font-size: 2rem;
 }
 
 .projet > section > h2 {
   color: #ecf0f1;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-align: center;
+  font-size: 1rem;
 }
 
 .projet > section > ul {
@@ -616,6 +621,12 @@ section#profile > #stats {
   }
 }
 
+@media (hover: none) {
+  header, nav {
+    position: relative;
+  }
+}
+
 @media (max-width: 480px) {
   header, nav {
     flex-flow: column wrap;
@@ -630,13 +641,9 @@ section#profile > #stats {
     margin: 0 !important;
   }
 
-  #stats {
-    font-size: .5rem;
-  }
-
   .projet {
     flex-direction: column;
-    margin: 1.5em;
+    margin: 1.5em 0;
   }
 
   .projet > section {
@@ -644,7 +651,7 @@ section#profile > #stats {
   }
 
   .projet > h1 {
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .projet > .image {
