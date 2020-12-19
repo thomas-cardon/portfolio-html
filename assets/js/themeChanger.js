@@ -60,7 +60,7 @@ function collapseNavbar(nav, navWidth, myName) {
   if (window.getComputedStyle(nav.parentElement).position == 'relative') return;
 
   nav.style.transform = 'translate(100vw, 0)';
-  myName.style.transform = window.scrollY > 50 ? "translate(0, -10vh)" : "unset";
+  myName.style.transform = window.scrollY > 50 ? "translate(0, -100vh)" : "unset";
 }
 
 /* On rabat la barre de navigation en une colonne dès qu'on descend afin de la garder visible */
