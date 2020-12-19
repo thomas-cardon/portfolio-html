@@ -50,21 +50,25 @@ window.onbeforeunload = function () {
 LoadingQ.push(Theme.load);
 
 let collapsed = false;
-let nav, navWidth;
+let nav, navWidth, myName;
 
 /* On rabat la barre de navigation en une colonne dès qu'on descend afin de la garder visible */
 window.addEventListener('scroll', function() {
   if (!navWidth) {
     nav = document.querySelector('header.sm > nav');
-    navWidth = nav && nav.getClientRects() ? nav.getClientRects()[0].width : null;
+    navWidth = nav.getBoundingClientRect().width;
+    myName = document.getElementById('myName');
   }
 
+  /* On anime pas la barre de navigation si sa position est relative (elle est relative que si l'écran est tactile -> règle CSS)*/
   if (window.getComputedStyle(nav).position == 'relative') return;
 
   if (!collapsed && window.scrollY > 50) {
     nav.style.fontSize = '0';
-    nav.style.transition = '1.5s';
+    nav.style.transition = '1s';
     nav.style.transform = "translate(" + navWidth + "px, 0)";
+
+    myName.style.transform = "translate(0, -10vh)";
 
     setTimeout(() => window.requestAnimationFrame(() => {
       nav.style.flexDirection = 'column';
@@ -75,8 +79,10 @@ window.addEventListener('scroll', function() {
   }
   else if (window.scrollY < 50 && collapsed) {
     nav.style.fontSize = 'unset';
-    nav.style.transition = '1s';
+    nav.style.transition = '0.5s';
     nav.style.transform = "translate(" + navWidth + "px, 0)";
+
+    myName.style.transform = "unset";
 
     setTimeout(() => window.requestAnimationFrame(() => {
       nav.style.flexDirection = 'row';
