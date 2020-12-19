@@ -3,6 +3,11 @@
  src: url("fonts/Heebo-Regular.ttf") format("truetype")
 }
 
+@font-face {
+ font-family: "HeeboExtraBold";
+ src: url("fonts/Heebo-ExtraBold.ttf") format("truetype")
+}
+
 :root {
   --color-primary: #ee5253;
   --color-secondary: #eab543;
@@ -151,6 +156,8 @@ a, .color-primary {
   align-items: center;
 
   user-select: none;
+  
+  transition: 1s;
 }
 
 /* Avatar */
@@ -208,7 +215,7 @@ img#avatar.sm {
   line-height: 10vh;
   color: var(--color-secondary);
 
-  font-family: system-ui;
+  font-family: 'HeeboExtraBold', system-ui;
   font-weight: 700;
 
   text-align: start;
@@ -316,7 +323,7 @@ nav.buttons {
 }
 
 .btn-highlight > a {
-  font-family: system-ui;
+  font-family: 'HeeboExtraBold', system-ui;
   font-weight: 700;
 
   cursor: pointer;
