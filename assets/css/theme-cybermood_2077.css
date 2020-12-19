@@ -51,7 +51,7 @@ body::-webkit-scrollbar-thumb {
  .title {
    flex-basis: auto;
 
-   font-size: 4vw;
+   font-size: 3em;
 
    color: #fff;
    user-select: none;
@@ -59,9 +59,13 @@ body::-webkit-scrollbar-thumb {
    text-align: center;
  }
 
- .title.sm {
-   font-size: 2rem;
- }
+.title.sm {
+ font-size: 2rem;
+}
+
+#myName {
+  transition: 1s;
+}
 
 /*
  * Réseaux sociaux
@@ -148,6 +152,8 @@ a, .color-primary {
   align-items: center;
 
   user-select: none;
+
+  transition: 1s;
 }
 
 /* Avatar */
@@ -155,7 +161,7 @@ img#avatar {
   border: 5px solid #fff;
   border-radius: 50%;
 
-  margin-right: 3em;
+  margin: 0.5em 1.5em 0 0.5em;
   width: 128px;
   height: 128px;
 }
@@ -282,10 +288,15 @@ header > nav {
 
   display: flex;
   flex-direction: row;
+
+  overflow: hidden;
 }
 
 nav > .btn-highlight {
   background-color: unset;
+
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 nav.buttons {
@@ -449,17 +460,8 @@ footer .title {
  * Style pour appareils ayant une taille d'écran plus petite que 600 px
  */
 @media (max-width: 600px) {
-  .me {
-    margin-top: 3em;
-    flex-direction: column;
-  }
-
   .subtitle {
     font-size: 1.3em;
-  }
-
-  .me:not(.sm) img#avatar {
-    margin-right: 0;
   }
 
   .description {
@@ -609,10 +611,6 @@ section#profile > #stats {
   section#profile > #stats {
     font-size: 1.4vw;
   }
-
-  .btn-highlight > a {
-    font-size: 0;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -628,8 +626,17 @@ section#profile > #stats {
 }
 
 @media (max-width: 480px) {
+  .me {
+    flex-direction: column;
+  }
+
+  .me:not(.sm) img#avatar {
+    margin: 0;
+  }
+
   header, nav {
     flex-flow: column wrap;
+    margin-top: 1em;
   }
 
   nav > .btn-highlight {

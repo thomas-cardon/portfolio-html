@@ -121,6 +121,8 @@ a, .color-primary {
   align-items: center;
 
   user-select: none;
+
+  transition: 1s;
 }
 
 h1 {
@@ -135,13 +137,17 @@ h1 {
   text-align: center;
 
   color: rgba(17,24,39);
-  font-size: 4vw;
+  font-size: 3em;
   font-weight: 900;
   letter-spacing: -.025em;
 }
 
 .title.sm {
   font-size: 2rem;
+}
+
+#myName {
+  transition: 1s;
 }
 
 /* Sous-titre */
@@ -253,7 +259,7 @@ img#avatar {
   border: 5px solid #eee;
 
   border-radius: 50%;
-  margin-right: 3em;
+  margin: 0.5em 1.5em 0 0.5em;
   width: 128px;
   height: 128px;
 }
@@ -293,6 +299,8 @@ header > nav {
 
   display: flex;
   flex-direction: row;
+
+  overflow: hidden;
 }
 
 /* Navigation bar buttons */
@@ -302,6 +310,9 @@ header > nav {
   padding: 1.5rem;
 
   --color-svg-1: black;
+
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .btn-highlight > a {
@@ -447,21 +458,8 @@ footer a {
  * Style pour appareils ayant une taille d'écran plus petite que 600 px
  */
 @media (max-width: 600px) {
-  /* Conteneurs */
-  .container {
-    margin-top: 3em;
-  }
-
   .container:first-of-type::before, .container:first-of-type::after {
     display: none;
-  }
-
-  .me {
-    flex-direction: column;
-  }
-
-  .me:not(.sm) img#avatar {
-    margin-right: 0;
   }
 
   .buttons {
@@ -600,10 +598,6 @@ section#profile > .title {
   section#profile > #stats {
     font-size: 1.4vw;
   }
-
-  .btn-highlight > a {
-    font-size: 0;
-  }
 }
 
 @media (hover: none) {
@@ -613,8 +607,17 @@ section#profile > .title {
 }
 
 @media (max-width: 480px) {
+  .me {
+    flex-direction: column;
+  }
+
+  .me:not(.sm) img#avatar {
+    margin: 0;
+  }
+
   header, nav {
     flex-flow: column wrap;
+    margin-top: 1em;
   }
 
   nav > .btn-highlight {
@@ -639,10 +642,6 @@ section#profile > .title {
   .projet > section {
     margin: 1em;
     font-size: small;
-  }
-
-  .projet > section > h1 {
-    font-size: 1em;
   }
 
   .projet > img {
