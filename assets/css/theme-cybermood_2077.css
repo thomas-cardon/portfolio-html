@@ -110,7 +110,7 @@ hr {
 }
 
 /* Conteneurs */
-.container {
+main, .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -264,7 +264,6 @@ img#avatar.sm {
 
 /* Haut de page */
 header {
-  position: fixed;
   z-index: 5;
 
   width: 100%;
@@ -277,6 +276,10 @@ header {
   transition: background-color 0.5s ease-in-out;
 
   overflow: hidden;
+}
+
+header.collapsable {
+  position: fixed;
 }
 
 header.sm {
@@ -487,7 +490,7 @@ footer .title {
 * Projets & profil GitHub
 */
 section#profile {
-  margin: 2em;
+  margin: auto;
   display: flex;
 
   flex-direction: column;

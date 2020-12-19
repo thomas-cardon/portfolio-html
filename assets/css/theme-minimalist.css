@@ -77,7 +77,7 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
-.container {
+main, .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,7 +271,6 @@ img#avatar.sm {
 
 /* Haut de page */
 header {
-  position: fixed;
   z-index: 5;
 
   width: 100%;
@@ -284,6 +283,10 @@ header {
   transition: background-color 0.5s ease-in-out;
 
   overflow: hidden;
+}
+
+header.collapsable {
+  position: fixed;
 }
 
 header.sm {
@@ -313,6 +316,7 @@ header > nav {
 
   overflow: hidden;
   white-space: nowrap;
+
 }
 
 .btn-highlight > a {
@@ -327,11 +331,12 @@ header > nav {
 
   color: var(--color-text);
 
-  transition: color 0.3s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btn-highlight > a:hover {
   color: rgba(0, 0, 0, 1);
+  transform: scale(1.05, 1.05);
 }
 
 .btn-highlight svg {
@@ -485,7 +490,7 @@ footer a {
 * Projets
 */
 section#profile {
-  margin: 2em;
+  margin: auto;
   display: flex;
 
   flex-direction: column;
