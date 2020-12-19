@@ -61,7 +61,7 @@ window.addEventListener('scroll', function() {
   }
 
   /* On anime pas la barre de navigation si sa position est relative (elle est relative que si l'écran est tactile -> règle CSS)*/
-  if (window.getComputedStyle(nav).position == 'relative') return;
+  if (!nav.parentElement.classList.contains('collapsable') || window.getComputedStyle(nav).position == 'relative') return;
 
   if (!collapsed && window.scrollY > 50) {
     nav.style.fontSize = '0';
