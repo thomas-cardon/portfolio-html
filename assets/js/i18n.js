@@ -14,6 +14,7 @@ const i18n = {
   lang: localStorage.getItem('language') || 'fr',
   refs: {
     en: {
+      "go-to-top": "Scroll to top",
       "language": "en",
       "subtitle": "19 year-old student, currently at Aix-Marseille, IT dept.",
       "here": "here",
@@ -74,6 +75,7 @@ const i18n = {
       "sources.link.10": "danistefanovic/build-your-own-x → build your own (insert technology here): learn something by creating it"
     },
     fr: {
+      "go-to-top": "Retourner en haut de la page",
       "language": "fr",
       "subtitle": "Etudiant de 19 ans à Aix-Marseille Université, département informatique",
       "here": "ici",
