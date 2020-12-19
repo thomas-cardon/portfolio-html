@@ -53,14 +53,19 @@ LoadingQ.push(Theme.load);
 * Barre de navigation rabattable
 * Fonctionne si la position n'est pas relative (& si l'appareil dispose d'un curseur)
 */
-let nav, navWidth, collapsed;
+let nav, navWidth, hadCollapsed, isCollapsing;
 
 function collapseNavbar(nav, navWidth, myName) {
+  isCollapsing = window.scrollY < 50;
+  if (hadCollapsed == isCollapsing) return;
+
   /* On anime pas la barre de navigation si sa position est relative */
   if (window.getComputedStyle(nav.parentElement).position == 'relative') return;
 
   nav.style.transform = 'translate(100vw, 0)';
-  myName.style.transform = window.scrollY > 50 ? "translate(0, -100vh)" : "unset";
+  myName.style.transform = window.scrollY > 50 ? 'translate(0, -100vh)' : 'unset';
+
+  hadCollapsed = isCollapsing;
 }
 
 /* On rabat la barre de navigation en une colonne dès qu'on descend afin de la garder visible */
@@ -72,15 +77,15 @@ window.addEventListener('scroll', e => {
     navWidth = nav.getBoundingClientRect().width;
 
     nav.ontransitionend = function() {
-      nav.style.fontSize = window.scrollY < 50 ? 'unset' : '0';
-      nav.style.flexDirection = window.scrollY < 50 ? 'row' : 'column';
-      nav.style.transform = 'unset';
+      console.log('transition end', hadCollapsed, isCollapsing);
 
-      collapsed = !collapsed;
+      nav.style.fontSize = isCollapsing ? 'unset' : '0';
+      nav.style.flexDirection = isCollapsing ? 'row' : 'column';
+      nav.style.transform = 'unset';
     }
   }
 
-  if (navWidth) collapseNavbar(nav, nav.getBoundingClientRect().width, document.getElementById('myName'));
+  if (navWidth) collapse(nav, nav.getBoundingClientRect().width, document.getElementById('myName'));
 });
 
 /*
