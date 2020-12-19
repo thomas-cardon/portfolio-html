@@ -49,48 +49,38 @@ window.onbeforeunload = function () {
 /* On met le chargement du thème dans la liste des fonctions à charger */
 LoadingQ.push(Theme.load);
 
-let collapsed = false;
-let nav, navWidth, myName;
+/*
+* Barre de navigation rabattable
+* Fonctionne si la position n'est pas relative (& si l'appareil dispose d'un curseur)
+*/
+let nav, navWidth, collapsed;
+
+function collapseNavbar(nav, navWidth, myName) {
+  /* On anime pas la barre de navigation si sa position est relative */
+  if (window.getComputedStyle(nav.parentElement).position == 'relative') return;
+
+  nav.style.transform = 'translate(100vw, 0)';
+  myName.style.transform = window.scrollY > 50 ? "translate(0, -10vh)" : "unset";
+}
 
 /* On rabat la barre de navigation en une colonne dès qu'on descend afin de la garder visible */
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', e => {
+  let collapse = (...x) => window.requestAnimationFrame ? window.requestAnimationFrame(() => collapseNavbar(...x)) : collapseNavbar(...x);
+
   if (!navWidth) {
     nav = document.querySelector('header.sm > nav');
     navWidth = nav.getBoundingClientRect().width;
-    myName = document.getElementById('myName');
-  }
 
-  /* On anime pas la barre de navigation si sa position est relative (elle est relative que si l'écran est tactile -> règle CSS)*/
-  if (!nav.parentElement.classList.contains('collapsable') || window.getComputedStyle(nav).position == 'relative') return;
-
-  if (!collapsed && window.scrollY > 50) {
-    nav.style.fontSize = '0';
-    nav.style.transition = '1s';
-    nav.style.transform = "translate(" + navWidth + "px, 0)";
-
-    myName.style.transform = "translate(0, -10vh)";
-
-    setTimeout(() => window.requestAnimationFrame(() => {
-      nav.style.flexDirection = 'column';
+    nav.ontransitionend = function() {
+      nav.style.fontSize = window.scrollY < 50 ? 'unset' : '0';
+      nav.style.flexDirection = window.scrollY < 50 ? 'row' : 'column';
       nav.style.transform = 'unset';
 
-      collapsed = true;
-    }), 500);
+      collapsed = !collapsed;
+    }
   }
-  else if (window.scrollY < 50 && collapsed) {
-    nav.style.fontSize = 'unset';
-    nav.style.transition = '0.5s';
-    nav.style.transform = "translate(" + navWidth + "px, 0)";
 
-    myName.style.transform = "unset";
-
-    setTimeout(() => window.requestAnimationFrame(() => {
-      nav.style.flexDirection = 'row';
-      nav.style.transform = 'unset';
-
-      collapsed = false;
-    }), 500);
-  }
+  if (navWidth) collapseNavbar(nav, nav.getBoundingClientRect().width, document.getElementById('myName'));
 });
 
 /*

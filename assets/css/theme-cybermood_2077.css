@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #myName {
-  transition: 1s;
+  transition: transform 1s;
 }
 
 /*
@@ -121,7 +121,6 @@ hr {
 
 .grid {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,8 +151,6 @@ a, .color-primary {
   align-items: center;
 
   user-select: none;
-
-  transition: 1s;
 }
 
 /* Avatar */
@@ -259,12 +256,11 @@ img#avatar.sm {
 
 .video-container > .container {
   position: relative;
-  z-index: 2;
 }
 
 /* Haut de page */
 header {
-  z-index: 5;
+  position: relative;
 
   width: 100%;
   padding: 0 0.5rem;
@@ -280,6 +276,10 @@ header {
 
 header.collapsable {
   position: fixed;
+}
+
+header.collapsable > nav {
+  transition: transform 1s;
 }
 
 header.sm {
@@ -318,11 +318,15 @@ nav.buttons {
 .btn-highlight > a {
   font-family: system-ui;
   font-weight: 700;
+
   cursor: pointer;
+
   text-transform: uppercase;
   text-decoration: none;
+
   letter-spacing: .15em;
   display: inline-block;
+
   position: relative;
 }
 
@@ -420,8 +424,6 @@ form.contact > button:hover {
 /* Bas de page */
 footer {
   position: relative;
-  z-index: 2;
-
   background-color: rgba(0,0,0,.5);
 
   min-height: 10em;
@@ -525,8 +527,9 @@ section#profile > #stats {
   font-size: 1.2em;
   font-style: italic;
 
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
+  width: 55vw;
+  padding: 1.25em;
+  margin: 0 auto 0.5em auto;
 
   border: 1px solid #FFEC48;
   border-left-width: .25rem;
@@ -603,27 +606,15 @@ section#profile > #stats {
   padding: 0;
 }
 
-/*
-* Style pour les projets pour certains appareils
-*/
-@media (min-width: 768px) and (max-width: 1024px) {
-  .bio {
-    font-size: 1vw;
-  }
-
-  section#profile > #stats {
-    font-size: 1.4vw;
-  }
-}
-
 @media (max-width: 1024px) {
   .projet .image {
     background-size: contain !important;
   }
 }
 
+/* On désactive la barre de navigation rétractable pour les appareils n'ayant pas hover */
 @media (hover: none) {
-  header, nav {
+  header.collapsable {
     position: relative;
   }
 }
