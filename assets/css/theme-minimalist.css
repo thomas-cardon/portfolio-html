@@ -123,7 +123,7 @@ a, .color-primary {
 
   user-select: none;
 
-  transition: 1s;
+  transition: 0.5s;
 }
 
 h1 {
@@ -148,7 +148,7 @@ h1 {
 }
 
 #myName {
-  transition: 1s;
+  transition: 0.5s;
 }
 
 /* Sous-titre */
@@ -285,7 +285,7 @@ header.collapsable {
 }
 
 header.collapsable > nav {
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 header.sm {

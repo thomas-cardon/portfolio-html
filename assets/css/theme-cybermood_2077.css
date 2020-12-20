@@ -69,7 +69,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #myName {
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 /*
@@ -156,8 +156,8 @@ a, .color-primary {
   align-items: center;
 
   user-select: none;
-  
-  transition: 1s;
+
+  transition: 0.5s;
 }
 
 /* Avatar */
@@ -200,15 +200,15 @@ img#avatar.sm {
   word-spacing: 0.5rem;
 }
 
-.description > section > h1 {
+.description h1 {
   font-size: xxx-large;
 }
 
-.description > section > h2 {
+.description h2 {
   font-size: xx-large;
 }
 
-.description > section > h1, .description > section > h2 {
+.description h1, .description h2 {
   margin: 0;
   padding: .5em;
 
@@ -286,7 +286,7 @@ header.collapsable {
 }
 
 header.collapsable > nav {
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 header.sm {
