@@ -280,8 +280,10 @@ header {
   overflow: hidden;
 }
 
-header.collapsable {
-  position: fixed;
+@media (hover: hover) and (pointer: fine) {
+  header.collapsable {
+    position: fixed;
+  }
 }
 
 header.collapsable > nav {
@@ -591,12 +593,6 @@ section#profile > .title {
   border-radius: 0 5px 5px 0;
 
   background-size: cover !important;
-}
-
-@media (hover: none) {
-  header.collapsable {
-    position: relative;
-  }
 }
 
 @media (max-width: 480px) {
