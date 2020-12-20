@@ -63,8 +63,17 @@ body {
   color: inherit;
 }
 
-.max-vh {
-  height: 100vh;
+.min-100vh {
+  min-height: 100vh;
+}
+
+.grid {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /*
@@ -73,10 +82,6 @@ body {
 @media (max-width: 600px) {
   .grid {
     margin-top: 3rem;
-  }
-
-  .max-vh {
-    height: auto;
   }
 }
 

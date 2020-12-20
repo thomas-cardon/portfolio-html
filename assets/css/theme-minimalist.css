@@ -88,12 +88,6 @@ body::-webkit-scrollbar-thumb {
 
 .grid {
   width: 65%;
-  z-index: 10;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 /* Liens, .color-primary */

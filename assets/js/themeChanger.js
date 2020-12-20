@@ -23,14 +23,14 @@ const Theme = {
     console.log('[Thèmes] >> Chargement du fichier :', './assets/css/theme-' + theme + '.css');
 
     if (save) {
-      localStorage.setItem('theme', theme);
+      localStorage.setItem('thomascardon.theme', theme);
       document.location.reload();
     }
     else return Theme.changeCSS('./assets/css/theme-' + theme + '.css');
   },
   /* Cette fonction s'assure du chargement du bon thème au chargement de la page */
   load: function() {
-    const theme = localStorage.getItem('theme') || 'minimalist';
+    const theme = localStorage.getItem('thomascardon.theme') || 'minimalist';
     console.log('[Thèmes] >> Chargement :', theme);
 
     const el = document.querySelector('a[data-theme="' + theme + '"]');
