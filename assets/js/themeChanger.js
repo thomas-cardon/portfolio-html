@@ -68,12 +68,14 @@ function collapseNavbar(nav, navWidth, myName) {
   hadCollapsed = isCollapsing;
 }
 
+const collapse = (...x) => window.requestAnimationFrame ? window.requestAnimationFrame(() => collapseNavbar(...x)) : collapseNavbar(...x);
+
 /* On rabat la barre de navigation en une colonne dès qu'on descend afin de la garder visible */
 window.addEventListener('scroll', e => {
-  let collapse = (...x) => window.requestAnimationFrame ? window.requestAnimationFrame(() => collapseNavbar(...x)) : collapseNavbar(...x);
-
   if (!navWidth) {
     nav = document.querySelector('header.sm > nav');
+
+    if (!nav) return;
     navWidth = nav.getBoundingClientRect().width;
 
     nav.ontransitionend = function() {
@@ -84,8 +86,7 @@ window.addEventListener('scroll', e => {
       nav.style.transform = 'unset';
     }
   }
-
-  if (navWidth) collapse(nav, nav.getBoundingClientRect().width, document.getElementById('myName'));
+  else collapse(nav, nav.getBoundingClientRect().width, document.getElementById('myName'));
 });
 
 /*
