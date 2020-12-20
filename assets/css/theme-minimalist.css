@@ -165,6 +165,7 @@ h1 {
   background-color: #fafcfc;
   padding: 1.5em;
   margin: auto 5em auto;
+
   color: inherit;
   line-height: 24px;
   text-align: justify;
@@ -172,28 +173,19 @@ h1 {
   font-family: Georgia, ui-serif, serif;
 }
 
-.description h3 {
-  font-weight: 600;
-  font-size: 1.7em;
-  font-family: 'Inter';
-
-  text-align: start;
-  letter-spacing: 0.1em;
-}
-
-.description > section > p {
+.description p {
   margin-top: 2em;
 }
 
-.description > section > h1 {
+.description h1 {
   font-size: xxx-large;
 }
 
-.description > section > h2 {
+.description h2 {
   font-size: xx-large;
 }
 
-.description > section > h1, .description > section > h2 {
+.description h1, .description h2 {
   margin: 0;
   padding: .5em;
 
@@ -201,6 +193,8 @@ h1 {
   font-family: 'Quicksand', system-ui;
   font-weight: 500;
   text-align: start;
+
+  line-height: normal;
 }
 
 .description > section > hr {
