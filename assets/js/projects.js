@@ -37,7 +37,7 @@ LoadingQ.push(async () => {
   }
 
   if (!me && window.fetch) {
-    let res = await fetch('https://api.github.com/users/ryzzzen');
+    let res = await fetch('https://api.github.com/users/thomas-cardon');
     me = await res.json();
 
     console.log('[Projets] >> Téléchargement du profil GitHub');
