@@ -152,3 +152,11 @@ body {
 #goToTop:hover {
   background-color: #feca57;
 }
+
+.whole {
+  flex: 0 0 100%;
+}
+
+.whole hr {
+  width: 100%;
+}
