@@ -16,7 +16,7 @@ const i18n = {
     en: {
       "go-to-top": "Scroll to top",
       "language": "en",
-      "subtitle": "19 year-old student, currently at Aix-Marseille, IT dept.",
+      "subtitle": "20 year-old student, currently at Aix-Marseille, IT dept.",
       "here": "here",
       "available": "available",
       "follows": "Following",
@@ -77,7 +77,7 @@ const i18n = {
     fr: {
       "go-to-top": "Retourner en haut de la page",
       "language": "fr",
-      "subtitle": "Etudiant de 19 ans à Aix-Marseille Université, département informatique",
+      "subtitle": "Etudiant de 20 ans à Aix-Marseille Université, département informatique",
       "here": "ici",
       "available": "disponible",
       "follows": "suit",
