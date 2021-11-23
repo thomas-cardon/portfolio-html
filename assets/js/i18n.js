@@ -57,6 +57,7 @@ const i18n = {
       "projects.4.desc": "Website that used to allow sync between user's players, so people could create a room, and watch a movie together, while being able to pause for everyone, etc. The website isn't open to public. Playground for NextJS, React, Material UI, and WebSocket.",
       "projects.5.desc": "School project: the goal was to create a new schedule for students, teachers and administration. A space to help at school during lockdown, thanks to the full integration of Zoom meetings.",
       "projects.6.desc": "Smart TVs shown in some schools of Aix-Marseille University. Allows everyone to check their own schedule from the TV or their phone, and much more.",
+      "projects.7.desc": "Created a game like Pacman, with collision and two players. Created using graphics library OpenGL", 
       "cv.link.1": "You can access the file",
       "cv.link.2": "if your browser doesn't show you the PDF here.",
       "cv.updated": "Updated 09/10/2021",
